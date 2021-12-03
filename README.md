@@ -1,2 +1,3 @@
-# admin-data-quality-stats
-code for the administrative data quality for statistics guidance
+# Framework for the assessment of administrative data quality for use in statistics
+
+
