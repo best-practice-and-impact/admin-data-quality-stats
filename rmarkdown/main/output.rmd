@@ -1,0 +1,344 @@
+---
+title: "Output Quality"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: 
+      collapsed: true
+---
+
+```{r global-options, include=FALSE}
+# Set echo=false for all chunks
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+
+## DRAFT GUIDANCE - OPEN FOR FEEDBACK
+
+
+
+
+## Introduction
+
+This part of the framework focusses on the quality of your outputs. In this context, output is defined broadly as a statistic that is officially published, or one that is used for further research/analysis. Quality at this stage refers to how well your ‘final’ output meets your users’ needs. 
+
+This section of the framework uses the Eurostat’s European Statistics (ESSnet) five dimensions of quality to help guide your thinking on what aspects of quality are most important for your output needs. These dimensions are: 
+
+* Relevance
+* Accuracy & Reliability
+* Timeliness & Punctuality
+* Accessibility & Clarity
+* Coherence & Comparability. 
+
+We have selected these dimensions because they have been developed by experts to assess fitness for purpose of statistical outputs.  
+
+In the Input Stage of the framework, we discussed that when using administrative datasets, you will often be limited by the data you can access and the purpose of its collection (often different from what you are now using it for). These limitations will feed through into the output you produce.  
+
+What you need to do is understand and tell the users what the quality of your output is based on the data and methods you used.  
+
+This section briefly explains: 
+
+* The five dimensions of statistical output quality. 
+
+* Particular challenges of using administrative data sources for each dimension. 
+
+* Questions you can ask yourself to decide whether this dimension is important for you. 
+
+You can use this grid and the text in this section to help you summarise and prioritise the dimensions you need, and some priority next steps. 
+
+<img src="Output Matrix.jpg" alt=" Table with the 5 dimensions of statistical outputs as columns. Rows have the following names: User needs, Resources available, Potential risks, Actions needed"
+	title="Output dimensions decision matrix" width="850" />
+
+
+
+For the dimensions which are very important to your user, you will need to do some detailed work to measure quality. Much work has been done on producing detailed measurements of quality for each of the dimensions, and the measuring of error. For brevity, detailed description of the methods have not been included here, although we have linked to further reading. Would you like them to be? Email DQHub@ons.gov.uk with your feedback. 
+
+
+
+## Relevance  
+
+### Definition
+
+Relevance refers to the degree to which statistical outputs meet user needs. It is covered in Principle V1 (Relevance to Users) of the UK Code of Practice.  
+
+_“Relevance is important because it places users and data at the centre of statistical production. Relevance is assessed by understanding user needs.”_  (Code of Practice for Statistics, UK Statistics Authority, 2018)
+
+### Is this dimension important to me? 
+
+This dimension should always be considered, as it is about producing something that meets your users’ needs.  
+
+### Administrative data considerations
+
+The main risk to relevance happens when the target concepts (what you are interested in, for example, unemployment) and outputs (the statistic you need to produce; percentage of people unemployed) are not properly understood when planning the statistical process, and when the data sources available don’t capture these targets. Sometimes when producing statistics using administrative data, this latter point is inevitable – the data is typically pre-defined, and you have to work with what you have. You must communicate this rationale to your users, identify where there are risks to relevance, and check this with your users. 
+
+### First steps
+
+In order to ensure you have a clear understanding of the needs of your user(s), you may want to think about the following questions. 
+
+* What was I trying to measure? How well does the output describe that? 
+
+* What were the expectations of my users? What do I need to tell them about what I produced? 
+
+* Could we produce all the statistics needed by the user? If not, why not? 
+
+* If we provided something similar but not the same, why?  
+
+* What are the implications of this for the usage of the output? 
+
+The _crucial_ element to this process is not just understanding the relevance of your output, but communicating this understanding to your users. Without this, people using the output may not use it appropriately, as they may not realise it is telling them something different from what they expected. 
+
+In essence, after processing and analysis, does what you have produced match what was needed – if not, how does it differ and what does this mean for the user? It is also important to note that user needs may change over time. Regular communication with your users is necessary to ensure you are still on track to produce something relevant to their needs. 
+
+There may also be an element of iteration to this process. If your users want something that your methods/processing simply cannot produce with the administrative data that you have, you may want to work with them to get to something that is possible and still useful for them. Or, if you have the time and resource, it may even be possible to develop/apply new statistical methods to adjust the data. 
+
+This section should have given you an overview of where to start when assessing relevance at output level, as well as some basic questions to guide your thinking. If you need something more in depth, ESSnet ([Appendix A, pg 202 SGA 2011_Deliverable_6.5.pdf (europa.eu)](https://ec.europa.eu/eurostat/cros/system/files/SGA%202011_Deliverable_6.5.pdf)) have developed a number of qualitative indicators that may help further guide you through this process in a structured way. 
+
+
+
+
+
+
+
+
+
+
+## Accuracy and Reliability 
+
+### Definition 
+
+Accuracy is the closeness between an estimated result (what you have produced) and the (unknown) true value (what you wanted to describe). 
+
+Reliability is the closeness of what you have currently produced to earlier estimates for the same period. This is a particular definition with roots in economic statistics that may be different to what you may have thought of as reliability in different settings. It is not how likely you are to get an answer with repeated measures. It is a measure of how your estimates need to be revised over time. 
+
+Accuracy is often wrongly equated as the only important quality dimension, however, there may be higher priority quality dimensions for your purpose. For example, during the COVID-19 pandemic, there have been some trade-offs made with accuracy and timeliness, due to the urgent need for information.  
+
+ 
+
+### Is this dimension important to me?  
+
+Some questions you can ask yourself to guide you through this process are: 
+
+* Who is using this output and what for? 
+
+* How important is accuracy and reliability to them? 
+ 
+
+* Will spending more time and money on measuring and improving accuracy involve sacrifices with the other dimensions (for example, timeliness or relevance)? 
+
+* How much resource do I have? 
+
+* What is needed and possible with the data and methods I am using? 
+
+* What are the risks to publishing inaccurate/unreliable outputs? 
+
+You may feel that needs of other dimensions override needs for accuracy for your scenario. Or, it may be that it is not possible to produce a highly accurate, reliable, output with the time and resources you have. In these situations, you should communicate your thoughts with your user and jointly decide, with them, how to prioritise the dimensions. Guidance for how to publish quality information of this type can be found here. 
+
+ 
+
+### Administrative data considerations 
+
+Accuracy is often described in terms of bias and variance however, you may need to take slightly different steps when using administrative data compared to other data sources where you have designed the data collection to answer your question. Your methods and processing will have been more complex, and you may have been linking one or more datasets which have differing levels of accuracy to begin with. You may also be linking multiple datasets over time.  You will therefore need to take different steps to measure the various types of errors that could have arisen from these situations.  
+
+In the specific context of longitudinally linked administrative data, a separate framework has been developed by ONS which you can find a [link to here](https://www.ons.gov.uk/releases/astatisticalqualityframeworkforlongitudinallylinkedadministrativedataoninternationalmigration). This provides guidance on how to think about and assess quality in this complex situation. 
+
+For reliability, you may want to publish an early estimate knowing that the full data will take longer to acquire. Your output may change as you get more information. When you get the data you need, or more knowledge about the methods you need to use you may choose to publish a second, more reliable estimate.  
+
+ 
+
+### First steps
+
+The easiest place to start with accuracy is to compare what you have produced with a similar output which you know the accuracy of (if there is a suitable one available). This can be from a survey or another administrative data source. If your output varies from your benchmark, it may highlight that there are some issues with what you have produced.  
+
+For reliability across time, you should compare your latest estimate to an earlier estimate of the same parameter. If your data are time-stamped, you can test the likely impact using previous rounds of data. 
+
+For both, you should take steps to model the difference between your output and the thing you are comparing it against. Is this a change in reality or a change in accuracy? An unexpected output (compared to previous estimates) may suggest a problem with accuracy or reliability (e.g. poor data collection that year), or it could be reflecting a genuine change in the thing you are measuring. It is worthwhile to remember that this isn't a fool proof approach; similar values to what you expected may also be masking a change in the real world due to inaccurate or unreliable data.  
+
+Although the theory for measuring error when using admin data is less established than for survey sources, there has been some important work done in this space. If highly accurate outputs are important to your user, or you do not have a baseline to compare with, you will need to quantify the error using more detailed methods. 
+
+For a more detailed assessment of accuracy, ESSnet ([Appendix A, pg 205 SGA 2011_Deliverable_6.5.pdf (europa.eu)](https://ec.europa.eu/eurostat/cros/system/files/SGA%202011_Deliverable_6.5.pdf)) have developed a number of qualitative indicators that may help guide you through this thinking process in a structured way. There is also ongoing work on various methods that can be used to quantify elements of accuracy, which you may decide you would like to look in to. 
+
+__There is ongoing work on the assessment of accuracy of administrative data. We will add links as they appear__
+
+Finally, you should think about how to communicate any assessments of accuracy/measurement error and reliability. It is typically recommended to publish methods used for processing and analysis, and clear, transparent communication about these is particularly important for administrative data methods, which are often new or have been adapted from survey methods. 
+ 
+
+ 
+ 
+ 
+ 
+## Timeliness and Punctuality 
+
+###  Definition 
+
+Timeliness refers to the time lag between the date you publish your statistic, and the reference period for that statistic (the time period which your statistical results are collected/calculated for).  
+
+Punctuality refers to the time lag between the actual and planned publication dates for your statistic. 
+
+### Is this dimension important to me? 
+
+There are specific guidelines around timeliness and punctuality. In line with The Code of Practice ([link to the code](https://www.statisticsauthority.gov.uk/code-of-practice/guidance/helpful-resources-producing-official-statistics/)), regular and ad-hoc official statistics need to be pre-announced via a 12-month release calendar. A specific release date should also be given at least 4 weeks in advance (if possible). Any changes to these release dates must be approved by the Head of Profession for Statistics or the Chief Statistician and should be communicated to users alongside the reason for the change.  
+
+You may, however, find yourself in a position where you need to make a trade-off between timeliness and other dimensions of quality – for example, you may have to compromise on accuracy in order to get your statistic published on time. This is particularly the case with administrative data, where sometimes due to the format you receive the data in, it requires a lot of processing and manipulation to be useable. Some things to consider when making trade-offs include: 
+
+* Do you have time to assess the other quality dimensions before publishing your statistic?  
+
+* If not, which are the highest priority and which could you compromise on?  
+
+* If compromises are made, what is the impact on the end-product and how can this be communicated?  
+
+* If this statistic is delayed, what is the cost to the users/wider society, and what is the cost to your institute’s reputation? 
+
+There are also ways you can manage trade-offs. For example, you could produce scheduled revisions to statistics. The first revision may be less accurate but more timely, and the second revision less timely but more accurate once you’ve had a chance to gather more data and validate it.  
+
+You could also discuss alternative options with your user, for example, broadening the level of geographic detail to national rather than local authority outputs, or focus on a select number of key local authorities first, with the rest to follow. 
+
+Whatever you decide, the benefits and limitations of trading off one dimension for another should be fully considered, weighed up, and communicated with justifications to the appropriate people (users, HoPs, etc.). 
+
+### Administrative data considerations 
+
+In an administrative data context, there are many factors which can impact timeliness and punctuality. For example, you may have limited control over data collection and accessibility, which affects how quickly you can process and analyse to produce your statistic. You may also need to do a considerable amount of processing and cleaning to get the data in a format that is suitable for your methods and analysis, which can take additional time. As mentioned in the input section of this framework, it is important to think about these things beforehand, so that you can factor in timeliness and punctuality needs ahead of time. 
+
+### First steps
+
+You may find it helpful to consider the following questions: 
+
+* When do you need to publish your output and why? 
+
+* Can you plan your processing and analysis around this? If not, what impact does this have on the timeliness and punctuality of the output? 
+
+* If there is an impact on timeliness and punctuality for any reason, will your statistic still be released in time to be of value to your customers?  
+
+Sometimes substantial time lags may be unavoidable. However, understanding the things that can impact timeliness and punctuality (e.g. when data is received and accessible, how long it will take to process) can enable more effective planning around potential obstacles. The important thing here, again, is where there is any compromise to this dimension, it should be communicated to the users, quantified if possible, and the implications clearly outlined.
+
+
+
+## Accessibility and Clarity 
+
+### Definition
+
+_“Statistics and data should be equally available to all, not given to some people before others. They should be published at a sufficient level of detail and remain publicly available.”_
+
+Code of Practice for Statistics, UK Statistics Authority, 2018 
+
+Accessibility is the ease with which users can access the statistics and data. It is also about the format in which data are available and the availability of supporting information. How easy is it for your users to access? 
+
+Clarity refers to the quality of the commentary, illustrations, accompanying advice and technical details you publish with your output. How easy is it for your user to understand? Clarity is also about the transparency of your methods, processing, and coding so that your approach is replicable and can be quality assured easily if needed. Essentially, it is about clearly and transparently setting out exactly how you have used the administrative data to answer a question different from the original purpose of the data collection.  
+
+### Is this dimension important to me? 
+
+Government has a responsibility to make sure that what we produce can be used and understood by the people who are using our statistics. You may, however, need to make trade-offs to ensure that what you are producing meets the needs of your users. For example, you may need to provide a more detailed explanation to ensure the output is presented accurately, and this may be more difficult to understand for some users. Questions you can ask yourself in order to help you here are: 
+
+* Who is the user, and what do they want/need to know about the output and how you got to it? To what level? 
+
+* Was the data journey particularly complex? How much detail do my users need to know? 
+
+ 
+
+### Administrative data considerations 
+
+The administrative data journey from data collection to statistical output may be less easy to define than with a survey which you have designed. This may make it harder for you to explain to the users of your output. You may not have access to all the information you need in order to tell the full story of how the data was collected, linked and processed to reach the output, or it may be very difficult to explain it in a way that people can readily understand. 
+
+It may also be difficult to know what data you can publish with your output, particularly if this has come from a different source. 
+
+As the data has been collected elsewhere, it may not conform to an agreed upon standard that makes it available for people to access and use. 
+
+ 
+
+### First steps 
+
+When you acquired the data, did you agree what could be shared and with whom? This information can sometimes be difficult to pin down, as people become afraid of the risks of publishing and sharing data, however, we have a responsibility to ensure our outputs and the decision making done with them are as transparent as possible. See the first phase of this guidance for information on fruitful conversations with suppliers. 
+
+ You may have data acquisition teams in your department who can help you decide to what degree you can publish the data which has been shared with you. This should always comply with the latest data protection legislation; you will have data protection officers in your organisation who can provide further support.  
+
+For the output, you will need to decide what the best way to display the information is for them (both the output and how you reached it). Note that some of the technical report should be filtered into the main bulletin in a digestible way, and uncertainty information should also be in the main bulletin.  
+
+Some questions to guide you through this include: 
+
+* Have you mapped the data journey from output to statistic? The QAAD toolkit and QAAD workshops can help you. Email the DQHub@ons.gov.uk for support with conducting one of these workshops. 
+
+* What is the best way for me to present this information? Think about your audience and how they will best access this information. How have other outputs been displayed? 
+
+* Does what I am providing meet accessibility requirements (link to government guidance on accessibility)? 
+
+* How well does the data I am publishing conform to common standards and protocols? 
+
+It may be useful to workshop the above questions with the team involved in creating the output. You may also have teams in your organisation who are responsible for checking the accessibility and clarity of your outputs, and they may have their own checklists and guidance on this.
+
+
+
+
+
+
+
+## Coherence and Comparability  
+ 
+
+
+### Definition
+_“Producers must demonstrate that they do not simply publish a set of numbers, but that they explain how they relate to other data on the topic, and how they combine with other statistics to better explain the part of the world they describe.”_ 
+
+Code of Practice for Statistics, UK Statistics Authority, 2018 
+
+*Coherence* refers to the extent to which the statistical processes used to generate multiple outputs align in terms of the concepts and harmonised methods used. In essence, how similar are statistics that refer to the same phenomenon, but that have been derived from different sources/methods?
+
+ 
+
+*Comparability* refers to the degree to which data or statistics can be compared, both over time and region or domain. Information about both comparability and coherence should be monitored and reported to users over time, in line with the UK Code of Practice. 
+
+
+ 
+
+### Is this dimension important to me? 
+
+Here are some questions to help you think about whether coherence and comparability are important to you: 
+
+* Is your statistic going to be used in combination with other statistics on the same topic?  
+
+* Are the trends and patterns shown likely to be compared with other statistics on the same topic? 
+
+* Has it been produced using new/different methods from those typically used? 
+
+* How important is it that your statistic is similar to others?  
+
+* Is this output being used to make comparisons with other areas? Or time periods? 
+
+* How essential is being able to compare with other regions to my user? 
+
+* Has the output been produced previously/in other areas in a way which is up to date/uses the methods I need? 
+
+ 
+
+### Administrative data considerations
+
+As noted in the input section, when working with administrative data (or administrative combined with survey data), the concepts, definitions, and classifications between the administrative source and statistical product may differ. For example, the population, units, variables, time reference, and even the definitions of these concepts may not be the same, which should be outlined to the output user. As also noted in the input section, you may have made adjustments due to these differences, by using a certain type of processing or method.  
+
+For example, even if the collection of data or way it is processed is not coherent, methods can be developed or adopted to make the statistic comparable at output level, e.g. aggregation or derivation of variables. 
+
+Whatever the case, this should be agreed/discussed with and communicated to the user, so they can fully assess how coherent the resulting output is with other statistics: why was the adjustment made? How was it made? What is the impact on the end product?  
+
+Comparability in an administrative data context can be impacted by factors outside your control, for example there may be policy or process changes which means the way the data is delivered, its processing needs, and the methods used to produce statistics from it changes. This is particularly relevant for time series statistics.  
+
+Additionally, comparability may be particularly relevant if you are moving from an output produced with survey data to one produced with administrative data. In this case, it is especially important to think about, assess, and communicate how the outputs are affected, the reasons behind these differences, and how any inconsistencies have been dealt with. 
+
+When there is a change in methods or data sources/quality, there may be a break in the time series so that statistics produced before the change are not comparable to those produced after it. Sometimes this reflects an improvement! Perhaps a more suitable data source becomes available, and you can produce more accurate statistics in more detail (trading off comparability for accuracy). Or, alternatively, perhaps the way the administrative source delivers the data means you need to apply different processing or linkage methods. In either case, the statistic you produce after this may no longer be comparable to previous ones on the same topic. This usually means that measures of change become unreliable. The implications of this should be considered and discussed with your user, especially if the primary purpose of the statistic is to compare it with previous or similar statistics. 
+
+ 
+
+### First steps
+
+Crucial things to think about at this stage are: 
+
+* How does your output compare to others with the same theme/topic? Does it ‘tell the same story’ as similar outputs from other sources that may have been produced in a different way? 
+
+* If not, do you know why? By how much does yours differ from others? 
+
+* How have you processed the data to produce your statistic? Are you using the same methods as before? If not, are there output implications to communicate to your users? 
+
+* Has the way you processed the data changed? Are you doing anything differently between getting the data and producing the statistic?  
+
+* Does this have any impact on the outputs produced? What is needed – a resolution, or discussion/clear communication with your users? 
+
+ 
+
+If your statistic is not coherent or comparable with others, this isn’t necessarily a bad thing. The extent of the difference should be examined, and reasons for it explored. For example, you may be using a novel method (or dataset) that produces more accurate estimates, in which case it may be a good thing that yours differs from other statistics on the same topic! Understanding the reasons behind incoherence, and whether they are expected/unexpected, and acceptable is what you should be aiming for. It is also important that clear, transparent communication is present (in the form of a report or publication) about methods, how they’ve been used, along with clearly annotated code and analysis of performance. 

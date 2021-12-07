@@ -1,0 +1,16 @@
+name: "ADQF"
+output_dir: "../../docs"
+output:
+  html_document:
+    css: "style.css"
+navbar:
+  title: "Quality of Admin Data in Statistics"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "User Guide"
+      href: summary.html
+    - text: "Input Quality"
+      href: departments.html
+    - text: "Output Quality"
+      href: output.html

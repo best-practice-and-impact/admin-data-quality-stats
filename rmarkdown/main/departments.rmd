@@ -1,0 +1,13 @@
+---
+title: "Input"
+---
+
+```{r global-options, include=FALSE}
+# Set echo=false for all chunks
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+
+#### DRAFT GUIDANCE - OPEN FOR FEEDBACK
+
+Here will be a summary of the inupt dimensions and tools and information to help you conduct proportionate quality assessments of the data you have.

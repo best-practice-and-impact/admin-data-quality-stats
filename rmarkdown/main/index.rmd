@@ -1,0 +1,20 @@
+---
+title: "Home"
+---
+
+## DRAFT GUIDANCE - OPEN FOR FEEDBACK 
+
+This framework is to help you assess the quality of administrative data for use in the production of official statistics. 
+
+Administrative data is data which has been collected during the operations of an organisation. Government produces a very large amount of administrative data, providing a valuable resource if it can be used correctly. 
+
+However, the data has not been collected for the sole purpose of creating a statistic, and this can lead to challenges when using it for this reason. A summary of these can be found [here](https://rss.onlinelibrary.wiley.com/doi/10.1111/rssa.12315). 
+
+
+Quality is defined as fitness for purpose - is this data set good enough for what I want to use it for? Did the statistic I produce meet the needs of the people who are using it? 
+
+If you are using data for a purpose that is different to the reason it was originally collected, there should be an assessment of quality to ensure that the data and resulting output meet your needs.
+
+The first step in any quality assessment is deciding what quality looks like for your scenario. What does the data need to do and have to ensure you can do what you need? 
+
+This decision factors in not only what high quality is to you and your user, but also the time & information you have, as well as any costs associated with conducting assessments or improving aspects of quality.  
