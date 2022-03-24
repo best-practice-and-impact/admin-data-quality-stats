@@ -1,5 +1,11 @@
 ---
 title: "Input"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: 
+      collapsed: true
 ---
 
 ```{r global-options, include=FALSE}
@@ -10,4 +16,382 @@ knitr::opts_chunk$set(echo=FALSE)
 
 #### DRAFT GUIDANCE - OPEN FOR FEEDBACK
 
-Here will be a summary of the inupt dimensions and tools and information to help you conduct proportionate quality assessments of the data you have.
+## Introduction
+
+This section of the framework guides you through understanding the quality of the administrative data you are using to produce your outputs/statistics/research. Secure, anonymised, administrative data provides a valuable resource for statisticians, however, the quality of the data can be difficult to understand. 
+
+Quality at this stage refers to how well the data you have available fits the purpose you want to use it for. Essentially, how suitable is it for producing what your users need? 
+
+This section of the framework aligns with the data quality (DAMA) dimensions outlined in [The Government Data Quality Framework](https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework#Data-quality-dimensions), although we expand upon these and reframe them into more of an administrative data context. The dimensions covered are completeness, uniqueness, timeliness, validity, accuracy, and consistency. They have been selected as they were developed by experts in data quality to assess the fitness for purpose of data. 
+
+This framework defines quality as fitness for purpose; it isn’t always realistic or cost effective to devote lots of effort to improving the quality of your data equally across all the dimensions. This section aims to guide you through how to best direct your resources based on what is important to your users’ needs, and hence what your data ideally needs to look like. 
+
+When using administrative datasets, you may be limited by things like access to the data and the purpose of its collection, which usually differs from how you will be using it for your outputs. What you need to do is understand and communicate with your users what the quality of your data is, and what this might mean for what you can use it for. For example, your users might want outputs at smaller geographic areas than you can produce with your data. Clear and effective communication with your users is important throughout the whole process. If changes or decisions need to be made, they should be made in partnership with your user where appropriate and possible. At the very least, such changes/decisions should be communicated to them along with justifications and implications. 
+
+Once you have established your quality needs, you will need to think about how to frame conversations with your suppliers in a way that makes sense to them. Their priority is ensuring their operations are run smoothly, and so you will need to factor in their needs and workload when having discussions about quality. This section briefly outlines: 
+
+* The six dimensions of input data quality 
+
+* Particular challenges associated with administrative data sources for each dimension. 
+
+* Questions you can ask yourself to decide whether this dimension is important for you. 
+
+For the dimensions which are very important to your user, you will need to do some detailed work to measure quality. Much work has been done on producing detailed measurements of quality for each of the dimensions. You may also already have your own methods, code or indicators for measuring data quality. For brevity, detailed descriptions of such methods have not been included here, although resources exist that provide recommended indicators for measuring most of the dimensions covered here (e.g. [ESSnet Komuso (2016)](https://ec.europa.eu/eurostat/cros/content/wp1-checklists-evaluating-quality-input-data_en)). 
+
+Would you like methods to be included? Email [Methods.Research@ons.gov.uk](mailto:Methods.Research@ons.gov.uk) with your feedback. 
+
+
+
+## Completeness 
+
+### Definition 
+
+Completeness describes the degree to which all essential values are present (or absence of blank/null/empty values).   
+
+Completeness applies both at data item level, and unit level. At a data item level, you may have an individual’s value missing, for example a date of birth, for an individual recorded in a data set. Alternatively, at a unit level, a full record may be missing; that individual is missing from the data set entirely.  
+
+Depending on the completeness of your data set, there may be under coverage (the dataset does not capture all the target population units that it should), or over coverage (the dataset includes more than your target population. Both under and over coverage can create bias in your data (& subsequent outputs). See the Accuracy section for more information about bias. 
+
+To assess completeness, you will need to identify how many items or records are missing vs. present. This dimension is sometimes described in terms of “missingness” rather than “completeness”, but the quality issue is the same. 
+
+Data is ‘complete’ when all the data required for your purposes are both present and available for use. This doesn’t mean your data set needs 100% of the fields to be complete, but that the values and units you need are present. 
+
+A ‘complete’ dataset may still be inaccurate if it has values that aren’t correct. 
+
+ 
+
+### How do I decide if it’s important? 
+
+It is always important to understand the completeness of your dataset to enable you to decide whether it is still suitable for the purpose you have in mind. 
+
+However, how important it is, and whether it needs to be addressed before you use the data may vary. To understand this, you may want to consider: 
+
+* Does your method/output need 100% of fields complete, or is, for example, 80% good enough – can you gauge a threshold of what level of completeness is acceptable? 
+
+* To what degree will your method/output be affected if the completeness doesn't match up to your desired level? 
+
+ 
+
+In essence, think about to what level the variables and dataset as a whole need to be ‘complete’, and the implications of them not matching up to this level. There are two key dimensions to this – the level of completeness, and the nature of the completeness (i.e., is the data biased due to certain groups not being captured by the dataset?). 
+
+ 
+
+### Administrative data considerations
+
+As data collection is typically outside your control when using administrative sources, it may not be possible to avoid poor completeness. It may also be difficult to understand the completeness ‘mechanisms’ - is data missing due to a software error? Data entry mistake? A change in policy/ data collection methodology? Because someone decided not to fill in that variable in a form? The administrative data journey can be a long and complex process, with many different opportunities for error and completeness to be impacted. Finding out the answers to these questions can involve a lot of back and forth to different people/departments, but they often have big effects on the methods you need to use.  
+
+A useful starting point can be plotting out your specific data source’s journey, mapping out at which points completeness may have been affected, and identifying who will have the answers to your questions. This information might be contained in internal or external metadata logs or known to specific teams/people.  
+
+ 
+
+### First steps 
+
+To develop an understanding of the completeness of your data source, you might find the following questions helpful: 
+
+* How many missing values are there in the variables you are interested in? 
+
+* What is the distribution of the missing values? Is there a trend in what is missing? Could this potentially introduce bias?  
+
+* If there is an issue with completeness, how bad is it and what is the likely impact on your method/output? You may not want to invest a lot of time in e.g. imputing lots of missing values if they won’t have much of an effect anyway.  
+
+* If there is a substantial issue with completeness, can you still use your method or do you need to use another? Can you address the missingness in another way beforehand?  
+
+* Do you have any idea of the reasons behind the missingness? If yes, what are the implications and does this need further investigation? 
+
+* Do you know if the data is missing completely at random or not at random? Are there particular groups with more missing data thus causing bias in the data? 
+
+ 
+
+All these decisions, along with the rationale behind them should be communicated with your users. Even if you do not fully understand the causes behind the completeness at this stage, you should still consider how to/what you can communicate during the statistical process, in the output stage, and to your users. 
+
+There are plenty of packages to help you visualise and quantify the completeness of your dataset, for example [visdat](https://www.rdocumentation.org/packages/visdat/versions/0.5.3) in R, and [missingno](https://coderzcolumn.com/tutorials/data-science/missingno-visualize-missing-data-in-python) in Python. 
+
+
+
+
+## Uniqueness 
+
+### Definition 
+
+Uniqueness describes the degree to which there is no duplication in records.  This means that the data contains only one record for each entity it represents, and each value is stored only once.   
+
+Data is unique if it appears only once in a data set. A record can be a duplicate even if it has some fields that are different. For example, two patient records may have different addresses and contact numbers. Depending on what you are using the data for, this may or may not be a uniqueness issue. If you want to know the total number of visits for every patient, this is not a problem. However, if you want to know how many patients you have on your roster, here you would be counting the same person twice.  Uniqueness is a particular risk when combining data sets as it can impact the coverage of the dataset.  
+
+### Is this dimension important to me? 
+
+Ask yourself the following questions in order to understand how ritical uniqueness is to your work:
+* What do I want to measure? Do I need a unique value per variable? 
+
+* What is the impact if I don’t have unique observation for every entity in my dataset? Think of our patient example in the section above. 
+
+* What are your key variables that need to have a single valid observation per unit?  
+
+ 
+
+### Administrative data considerations
+
+Administrative data can be information that people have already provided to government in order to access services. Before it is used for statistics, admin data is anonymised to ensure that individuals cannot be identified in any way. As it is collected across different government services, there can sometimes be issues with standardisation with how the data is recorded.  
+
+People’s lives also change when they are inputting data across different services. In surveys we can ask questions to gain understanding of any changes, however, this is not possible to achieve when we collect and use admin data. We have lost this context when using administrative data, making it more difficult to assess things like uniqueness of objects described in it.  
+
+You will also most likely be working with large datasets, where you can’t manually check every record. 
+
+ 
+
+### First steps 
+
+You can start first by asking yourself the following questions: 
+
+* How many values are included in your dataset? If you have information from the supplier on the numbers expected does this match up? 
+
+* What do you know about the how the data is collected and how this could impact on uniqueness? 
+
+* Does the source have any policies on how data is collected? Does any of the data fall outside of this (see validity)? This may identify potential records which do not follow standard processes and would therefore not register as a duplicate in basic checks. 
+
+* If you find multiple observations for the same unit, ask yourself whether this is expected considering the nature of the dataset. Also, ask yourself whether there are differences across the duplicates or if they are a genuine double copy. 
+
+* What metadata do you have? This may include information on the expected level of duplication/ replication for example, if multiple entries/ admissions/use of a service per person. 
+
+There are several packages in both R and Python which you can use which will tell you the number of unique variables in your dataset. [Skimr](https://www.rdocumentation.org/packages/skimr/versions/2.1.3) and [dlookr](https://github.com/choonghyunryu/dlookr) in R, and [pandas-profiling](https://pypi.org/project/pandas-profiling/) in Python will give you values on this. This will not give you all the information you need. You will need to understand how many unique variables you expect to see when looking at the output of these packages. 
+
+There are also steps in processing which can be used to identify duplicates. If you would like to know more about these, please email [Methods.Research@ons.gov.uk](mailto:Methods.Research@ons.gov.uk) 
+
+Duplicate records can cause challenges for operations as well as statistical quality. If you are encountering lots of duplicates, it may be helpful to have a discussion with the people providing the data to help standardise the data collection, which could help both them and you the analyst. This is a dialogue of support and mutual benefit, rather than a criticism of the data you have received. If the supplier needs multiple entries for their purposes, it may be possible to negotiate a unique ID.   
+
+
+
+
+## Timeliness 
+
+### Definition
+
+Timeliness refers to how well the data reflects the period they are supposed to represent. It also describes how up to date the data and its values are. 
+
+The attributes represented in some data might stay the same over time – e.g. the day you were born does not change, no matter how much time passes. Other attributes, such as income, may change – e.g. your income at age 16 is unlikely to be the same as your income at age 50. 
+
+Your data is also ‘timely’ if the lag between its collection and its availability for your use is appropriate for your needs. Is the data available when expected and needed? Does it reflect the time period it is supposed to? 
+
+ 
+
+### Is this dimension important to me? 
+
+Timeliness may be more or less important for different uses. For example, in healthcare, timely data is critical for a latest estimate of daily COVID mortality. However, it may be less critical for the data to be the most up to date when describing quarterly trends in COVID infections – it may be acceptable here to use previous quarterly figures rather than data about this morning’s infections, for example. 
+
+Some questions to think about to help you decide how important timely data is for your use case include: 
+
+* How recent does the data need to be?  
+
+* What time period do you need the data to cover? 
+
+* What is the impact if the data you are using is not the most up to date? 
+
+* Is the data being used to produce a series of outputs over time? If so, how often is the data delivered, and when? Does this line up with when you need to produce the outputs by? 
+
+If you are in the fortunate position to have multiple administrative datasets to choose between, you may need to consider trade-offs. For example, do you go with a more timely but less accurate dataset? How relevant will your output be to the user if your data is not timely enough? Or a more accurate but less timely dataset? This will depend on your users’ needs and should be agreed with them after clear communication about the implications of any potential decisions. 
+
+ 
+
+### Administrative data considerations
+
+With administrative data there are numerous factors that can have an impact on timeliness.  
+
+Firstly, as only approved individuals can access administrative data, obtaining this approval prior to accessing any data you wish to use can take a long time. After this, data may also need to be cleaned, processed, and then quality assessed by you. All of this takes time, and you should try to factor in how long you need to do all these things. 
+
+Administrative datasets may take more processing than if you had collected the data yourself. You may need to transform, aggregate, or construct units. This should be factored into timeliness considerations. The dataset might arrive ‘in time’, but how much do you need to do to it afterwards? Do you have enough time to do this between when it arrives and when your output needs to be produced by?  
+
+Additionally, the timing of the supplier’s collection and delivery of the data may not align with your organisation’s reporting periods/when you need to produce the output by. 
+
+Because of this, an administrative dataset may be timely at the point of collection (i.e. the data is the most recent, and reflects the time period it is supposed to), but this timeliness may have decreased by the time the output is produced. 
+
+ 
+
+### First steps
+
+Some initial things to think about when exploring the timeliness of your administrative data include: 
+
+* What time period should the data reflect? 
+
+* Do you have the actual event data as opposed to the date the record was entered? I.e., does the date reflect when the event occurred/was collected, or when this information was entered into the system? 
+
+* What is the time lag between the period they were collected and when you can access the data  – is this acceptable? 
+
+* By the time you have accessed, quality assured and processed the data, will it still accurately reflect what it should be measuring? 
+
+* How often do you receive data from the admin source?  
+
+* If you need to link multiple datasets, how do the answers to the above questions match up for each data source?  
+
+* Where there are concerns around timeliness, how much of an impact is the processing & analysis likely to have? Could some of it be dropped if it is thought/found to have a small effect in the interest of timeliness or punctuality? This might mean a compromise on accuracy, and is something that could be discussed and agreed with your user. 
+
+It is quite hard to separate input from output considerations here. Your assessment of input data timeliness quality should also factor in when you need to produce your output by. How useful is the data you have access to now for your user’s needs? How relevant is the timing of this? By the time you have used it to produce what is necessary, how will this usefulness have changed?  
+
+
+## Validity 
+
+### Definition
+
+Validity is defined as the extent to which the data conforms to the expected format, type, and range. For example, an email address must have an ‘@’ symbol; postcodes are valid if they appear in the Royal Mail postcode list; calendar month should take one of 12 pre-determined values.  
+
+Having valid data means that it can be more easily linked with other data sets, and makes automated processing run more smoothly.  
+
+ 
+
+### Is this dimension important to me? 
+
+The data you have should always be within range and describe the thing you want to measure in the correct format, to ensure there are no misrepresentations in the data. You should identify which variables are most important to you from your dataset and run checks for validity. 
+
+If you are linking datasets, you need to make sure that the data conforms to the format you think it does.  
+There may be trade-offs with other dimensions; if you need a complete or very timely dataset, you may decide some invalid values can be kept in the first instance, revising as you get more data. 
+
+ 
+
+### Administrative data considerations
+
+You may have several different people/systems collecting data which may not conform to a standard way to do so.  If the data collection has been conducted over a long time period, standards may change due to technology advancements or legislation, or response to data quality issues. This lack of permanent, unified standard may result in data of different formats describing similar concepts. 
+
+Valid data is not always accurate; for example, a variable for eye colour may list someone’s eyes as blue when they are brown. The data is valid (it is a colour), but it is not accurate (it is not reflective of reality). 
+
+ 
+
+### First steps
+
+Invalid data can often be identified by automated processes. If this has not already been done by someone else, you may need to programme rules which identify data which is out of range or not in the correct format. You will want to speak to people who have context knowledge of expected ranges of the data – for example in medical data there may be some specialist knowledge regarding what an expected range is for test results.  
+
+Once you have developed rules for expected formats and ranges, there are several packages in common analytical software which can help you run basic checks on this, including [Skimr](https://eur03.safelinks.protection.outlook.com/GetUrlReputation) and [dlookr](https://github.com/choonghyunryu/dlookr) in R, and [pandas-profiling](https://pypi.org/project/pandas-profiling/) in Python. If invalid data is found, you also need to decide what you do with it (remove it, adjust it, etc.). 
+
+
+Some questions you can ask when looking at the data: 
+
+* How many categories should be present in the data?  
+
+* What dates should it cover?  
+
+* Are there any values way out of range?  Or in an unexpected format? Do you remove these? 
+
+You should also communicate with the data supplier to find out how many different organisations have collected the data, and if there is documentation for what standard they should be conforming to. Check the policies and procedures for collecting the data and any documentation for the systems being used for rules about how data should be collected.  
+
+
+## Accuracy 
+
+### Definition
+
+Data accuracy refers to how well the data matches reality - does the data you have capture what you are trying to measure?  
+
+Accuracy can be impacted in numerous ways, at multiple points along the data journey. The actual values may be incorrect (e.g. measurement error), or the data source as a whole may be biased in some way and therefore not reflect the required population. (This may be due to e.g. under-coverage of key groups, or problems with how the data were originally collected or the questions were asked). 
+
+ 
+
+### Is this dimension important to me? 
+
+Accuracy is always important, and we advise you to develop an understanding of potential sources of error and bias in your data and how this might impact its usage. 
+
+However, how important it is, and whether it needs to be addressed before you use the data may vary. To understand this, you may want to consider: 
+
+* What do you ultimately need to produce with the data? What aspects of accuracy have implications for this end-product? 
+
+* Do you already have an idea of what methods you need/want to use? If so – do these have any specific data requirements or assumptions? How accurate do they require the data to be beforehand?  
+
+* Do users need aggregate outputs? Accuracy is then only needed at that level which means you can be less focused on accuracy at the individual level. 
+
+There may be cases where accuracy is less of a priority than other dimensions, such as timeliness. In this case you may decide, with your users, to make a trade off with one of these dimensions. For example, the Office for National Statistics [published a new model for publishing Gross Domestic Product (GDP) in 2018](https://www.ons.gov.uk/economy/grossdomesticproductgdp/articles/introducinganewpublicationmodelforgdp/2018-04-27#the-trade-offs-of-the-new-model) which allowed monthly estimates of GDP to be published. In this case, there was a trade-off made that “[reducing] timeliness in exchange for a higher quality estimate is worthwhile”. 
+
+If you are limited on time and resources, you could focus your efforts on accuracy for those cases that are likely to have the biggest impact on the statistics. This is called 'selective editing', where edits are focussed on units that would have a significant impact on published estimates if they were not validated/corrected. This can help to ensure not too much time is spent on cases that are unlikely to have a large impact on outputs. 
+
+ 
+
+### Administrative data considerations 
+
+Administrative data can require in-depth understanding of its quality, including accuracy, as the data are originally collected for operational purposes and not statistical.  For example, say you were interested in knowing how many people had the flu, broken down by sex and age, and you were using GP records. Whilst these records would give you a general idea, there may be bias in the data source if certain age groups or sexes are less likely to go to their GP when they have the flu and consequently this data is not recorded on their admin data record.  (i.e. a coverage issue). Depending on how your resulting statistic was used, this could lead to consequences such as not enough flu jabs being available that year etc. for groups where there is a bias in the data. 
+
+It is also sensible to remember that variance and volatility are present in administrative data. Rather than arising from sampling as you might think of them in a survey sense, this can be driven by the time and methods of collection. For example, to find an average spend on a person’s credit card, you will need to be aware of anything that could drive fluctuations in their spending and consider a large enough period of their statement to account for this. If they book all their holidays in January but then spend very little in February, looking at either month individually would not give you an accurate picture of their average spend. 
+
+As errors and bias can be introduced throughout the data journey, it is a good idea to plot out your specific source’s journey – from where it was collected up until you received it – and liaise with the appropriate departments/people to understand more about it. If you are using multiple datasets, you should do this for each one. 
+
+Accuracy can become more complex when working with linked datasets – e.g. if you have two sources and one says person A is a doctor, and the other says person A is a nurse, which is correct? In this case, you may need to apply specific methods (e.g. rule based, probabilistic) to resolve the issue, or perhaps find out more about the variables and sources and how/when the data was collected.  
+
+[A specific, separate framework]( https://www.ons.gov.uk/methodology/methodologicalpublications/generalmethodology/onsworkingpaperseries/onsworkingpaperseriesno19anerrorframeworkforlongitudinaladministrativesourcesitsuseforunderstandingthestatisticalpropertiesofdataforinternationalmigration) has been developed to help with more detailed understanding of the quality of longitudinal and longitudinally linked administrative data sources. 
+
+ 
+
+### First steps
+
+How you assess accuracy will depend on your user’s needs, as well as how much resource and time you have to carry out the assessment. To start you off, you may want to consider the following things:   
+
+* Which variables are you interested in?  
+
+* How accurate are these specific variables? (See ESSnet (2016) “Checklist for evaluating the quality of input data” for some suggested indicators to measure accuracy) 
+
+* What methods are you using to produce your output? Is there a threshold of accuracy required? 
+
+* The level of accuracy needed in your dataset depends on what level of output is needed. For example, if you are outputting statistics at regional level it may be less important that each individual record is as accurate as possible, and more important that the data aggregated at regional level is highly accurate. This will also depend on how you plan to process the data, what methods you will use, and your user’s overall needs.  
+
+* You may also want to prioritise – find out what is most important to your user(s) and focus on these elements first. 
+
+* Do you have an idea of the potential sources of bias in the dataset? E.g. are any key population groups unlikely to be present on them, and how big an issue is this for your particular use case? Finding out about how the data were collected can assist with this understanding, and it is a good idea to explore the data yourself to check whether anything ‘looks odd’. 
+
+* Which cases are most likely to have the biggest impact on your output? It may be advisable to focus your efforts on these specific cases. This will feed into your methods e.g. selective editing. 
+
+* Do accuracy issues need to be addressed before you apply processing/methods, or can they be addressed during/afterwards? Some methods require specific assumptions about error to be met, and if these are violated, you risk biased/inaccurate results. 
+
+ 
+
+There are a lot of things to consider for this dimension. To make this more manageable, you may want to start by noting down all the relevant potential accuracy issues, so that you can consider each systematically. Try to find out if you already have internal checklists that could help with this. In the case of administrative data, find out what accuracy checks the data suppliers have carried out. 
+
+Providing an exhaustive list of all potential risks to data accuracy, and individual methods for measuring and addressing each error and source of bias is beyond the scope of this framework. However, we provide some general pointers below. 
+
+Many methods exist for measuring the different kinds of error – which method you use depends on how much time you have and what your users’ needs are. The same applies to bias, for example, [indicators](https://www.cmi.manchester.ac.uk/research/projects/representative-indicators-for-survey-quality/#:~:text=The%20indicators%20are%20called%20Representativity%20Indicators%20or%2C%20for,use%20them%20in%20a%20practical%20data%20collection%20environment.) are under development to help measure how well a group of survey/register respondents reflects the wider population. 
+
+Generally, you should try to account for bias in your measurements and make sure that any data (and resulting output) bias, along with how you addressed/accounted for it, is clearly and honestly communicated to your users. If you expect a constant bias, the results may be poor in terms of the level but still be useful for measuring change over time.  
+
+Understanding specific errors in your data can be tricky. If you have a gold standard dataset where you know the values are highly accurate, you could compare your administrative dataset’s values to your gold standard dataset’s values.  
+
+Whilst it might not be possible to resolve all sources of error, some methods exist for estimating the amount of measurement error in a dataset (e.g. see structural equation modelling for continuous data, and latent class modelling for categorical data). In an administrative data context, this area is very much still developing. A framework of administrative data errors and corresponding methods for measuring and correcting them is due to be published soon, and will be linked here once available. See the following resources that provide more detailed metrics for assessing data accuracy: 
+
+* [Checklist for the Quality Evaluation of Administrative Data Sources (Statistics Netherlands, 2008)](https://www.academia.edu/5818247/Checklist_for_the_Quality_evaluation_of_Administrative_Data_Sources) - page 9 provides a table of indicators for measuring data accuracy (although please note that this framework partitions quality up in a slightly different way). 
+
+* [ESSnet Komuso (2016)](https://ec.europa.eu/eurostat/cros/content/sga-specific-grant-agreement-1_en) – page 41 onwards of “Checklist for evaluating the quality of input data” provides a list of indicators to measure administrative input data quality (mostly accuracy related). 
+
+Remember, data accuracy means how well the data matches reality. The overarching thing you should be trying to find out at this stage is the alignment between what you want to be measuring and what your data is telling you. Any issues here should be clearly communicated with your users, and a joint decision made as to how to handle them. 
+
+ 
+
+
+
+## Consistency 
+
+### Definition
+
+Consistency is achieved when data values do not conflict with other values within a dataset or across different data sets. For example, date of birth for the same person should be recorded as the same date within the same data set and between data sets. It should also match the age recorded for that person. Their postcode should also not conflict with their address, etc. 
+
+### Is this dimension important to me? 
+
+This dimension becomes especially important if you are linking datasets. In these cases, you will need to make sure as much as possible that the data is consistent across them. It may take you some time and involved detective work to identify which data is correct – if you have resource pressures or quick turnaround times you may need to balance this process against what is possible for you. 
+
+
+Consistency is still important with unlinked data. For example, say you are producing outputs broken down by location and your dataset provides you with individuals’ postcodes and addresses. If person A’s address says they live in Southampton, but their postcode is from Newport, you may be unsure where their ‘true’ residence is. 
+
+To help you think about whether consistency might be particularly important for your scenario, you might want to consider the following things: 
+
+* Do you have multiple sources measuring the same variable in a linked dataset? How important is it that these values are the same across sources? What are the implications if there are inconsistencies (e.g. inaccurate outputs)?  
+
+* Do you have multiple related variables in a single source dataset (e.g. age and number of children)? How important is it that these are consistent? What are the implications if they are not? 
+
+ 
+
+### Administrative data considerations
+
+With survey data, there has been a lot of research and guidance on harmonisation, and there are guidelines on what data to collect/how to collect it. These standards do not always transfer to administrative data, which can be collected about the same object in lots of different ways across sources, all of which will be influenced by the operational need of the organisation you have received data from. While this operational need is necessary for your data supplier, it can pose real challenges for you. You also need to consider the impact of inconsistencies in the data sources on your output. 
+
+### First steps
+
+Look at the documentation and have conversations with your data suppliers about how the data has been collected and why. Read documentation about this. This will help you to understand where inconsistencies may be arising, and how you can mitigate these.  
+
+When you are linking data, think about the variables you will use to link the data sets. When you have linked your data, run similar assessments for linkage rates.  
+
+If you find lots of inconsistencies, do you have a trusted data set to compare with? While not always possible, this is the quickest way to find out which of the data points are accurate. 
+
+If you find many inconsistencies, it will help to have a “gold standard” data set to compare with. This will be one you know is accurate and will help you make decisions about which data to trust. 
+
+If you cannot identify the correct data value, you may choose to develop a set of rules to help you make decisions about how you are going to deal with inconsistencies based on what you need the data for. For example, if you need a very timely data set, you may decide to use the most recent value. You can also use what you know about how the data has been collected and processed, and how/why it’s been coded the way it has. For example, if you have two ethnic group variables and you know one of them was collected via self-report, and the other was entered by an arresting officer, you may choose to go with the values from the self-reported variable. These rules must be agreed with your user, along with any potential quality problems within the other dimensions which ensue because of them (e.g., potential accuracy concerns). 
+
+You might also be interested in exploring modelling methods for resolving inconsistencies. This is a relatively new research area in administrative data, but if you are interested, one such example is Boeschoten et al.’s (2017) multiple imputation latent class modelling method, linked [here](https://www.researchgate.net/publication/321208093_Estimating_Classification_Errors_Under_Edit_Restrictions_in_Composite_Survey-Register_Data_Using_Multiple_Imputation_Latent_Class_Modelling_MILC). 
