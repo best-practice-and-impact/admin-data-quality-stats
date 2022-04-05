@@ -8,6 +8,8 @@ This framework is to help you assess the quality of administrative data for use 
 
 Administrative data is data which has been collected during the operations of an organisation. Government produces a very large amount of administrative data, providing a valuable resource if it can be used correctly. 
 
+There are legal gateways which can allow accredited and approved researchers to access administrative data for research and statistical purposes. There are certain criteria to meet to ensure this can happen including the assurance that a person’s identity cannot be identified in the information disclosed for research and statistics. 
+
 However, the data has not been collected for the sole purpose of creating a statistic, and this can lead to challenges when using it for this reason. A summary of these can be found [here](https://rss.onlinelibrary.wiley.com/doi/10.1111/rssa.12315). 
 
 
