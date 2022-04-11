@@ -10,7 +10,9 @@ knitr::opts_chunk$set(echo=FALSE)
 
 ## DRAFT GUIDANCE - OPEN FOR FEEDBACK
 
-Administrative data can and should only be accessed securely and via legal gateways. The use of it represents an opportunity for statisticians, however, it is important to remember that the subjects of the data should be protected from misuse. This framework does not support you with making decisions about access of data, however, this is something you need to consider beforehand. However, data used legally and securely can enable better, data driven decision making through quality statistics. This framework has been designed to help you make decisions about quality of administrative data for statistics. It groups the quality assessment into two phases: input and output quality.  
+Administrative data can and should only be accessed securely and via legal gateways. The use of it represents an opportunity for statisticians, however, it is important to remember that the subjects of the data should be protected from misuse. This framework does not support you with making decisions about access of data, however, this is something you need to consider. Your organisation will have data protection policies, such as these from the [ONS](https://www.ons.gov.uk/aboutus/transparencyandgovernance/dataprotection). If you have questions you should contact your Data Protection Officer. 
+
+Data used legally and securely can enable better, data driven decision making through quality statistics. This framework has been designed to help you make decisions about quality of administrative data for statistics. It groups the quality assessment into two phases: input and output quality.  
 
 The __input__ quality assesses the data you have coming in the door; how suitable is it for what you want to do with it?  
 
