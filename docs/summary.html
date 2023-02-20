@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -19,29 +19,16 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -54,7 +41,32 @@ if (window.hljs) {
 
 
 
-
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -66,8 +78,13 @@ if (window.hljs) {
   margin-left: auto;
   margin-right: auto;
 }
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -81,13 +98,40 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
-pre code {
-  padding: 0;
-}
 </style>
 
 
 <style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
 .dropdown-submenu {
   position: relative;
 }
@@ -115,7 +159,7 @@ pre code {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
+  border-left-color: #ffffff;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -127,7 +171,7 @@ pre code {
 }
 </style>
 
-<script type="text/javascript">
+<script>
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -138,23 +182,10 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.tab('show');
+  menuAnchor.parent().addClass('active');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
 });
 </script>
 
@@ -166,6 +197,7 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
+  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -201,7 +233,6 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
-  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -213,6 +244,18 @@ $(document).ready(function () {
   display: none;
 }
 </style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
 
 <!-- code folding -->
 
@@ -256,7 +299,7 @@ $(document).ready(function () {
           </div><!--/.container -->
         </div><!--/.navbar -->
 
-<div id="header">
+<div class="fluid-row" id="header">
 
 
 
@@ -265,17 +308,62 @@ $(document).ready(function () {
 </div>
 
 
-<div id="draft-guidance---open-for-feedback" class="section level2">
-<h2>DRAFT GUIDANCE - OPEN FOR FEEDBACK</h2>
-<p>Administrative data can and should only be accessed securely and via legal gateways. The use of it represents an opportunity for statisticians, however, it is important to remember that the subjects of the data should be protected from misuse. This framework does not support you with making decisions about access of data, however, this is something you need to consider. Your organisation will have data protection policies, such as these from the <a href="https://www.ons.gov.uk/aboutus/transparencyandgovernance/dataprotection">ONS</a>. If you have questions you should contact your Data Protection Officer.</p>
-<p>Data used legally and securely can enable better, data driven decision making through quality statistics. This framework has been designed to help you make decisions about quality of administrative data for statistics. It groups the quality assessment into two phases: input and output quality.</p>
-<p>The <strong>input</strong> quality assesses the data you have coming in the door; how suitable is it for what you want to do with it?</p>
-<p>The <strong>output</strong> quality assesses the quality of the statistics or analysis you have produced; how well does it meet you and your users’ needs?</p>
+<div id="framework-structure" class="section level2">
+<h2>Framework structure</h2>
+<p>This framework has been designed to help you make decisions about the quality of administrative data for statistics. It groups the quality assessment into two phases: input and output quality.</p>
+<p>The input quality assesses the data you have coming in the door; how suitable is it for what you want to do with it?</p>
+<p>The output quality assesses the quality of the statistics or analysis you have produced; how well does it meet you and your users’ needs?</p>
 <p>Both phases use quality dimensions to help you prioritise and assess different aspects of fitness for use. Quality dimensions are characteristics of the data and output which may be important to you and your users. Very rarely will there be an output or dataset which is completely perfect. Identifying the dimensions which are important for you helps you to make decisions about how fit for purpose your data and output are. As the purpose of the data and output are different (one is to be processed, the other published and shared), the dimensions are slightly different across the phases.</p>
-<p>Within each section is a description of the dimensions of quality and challenges for each when using secure administrative data. There are also some questions and tools to guide you through deciding whether this aspect of quality is important for your purpose. Finally, there is an introduction to assessing that dimension of quality, with some links to in-depth methods. For brevity and to prevent duplication, these have not been directly included here. If you would like them to be, please email <a href="mailto:Methods.Research@ons.gov.uk">Methods.Research@ons.gov.uk</a></p>
-<p>The purpose of this framework is not to answer these questions for you, but to point you towards what you should be thinking about (and doing) in order to understand whether your data and/or your output is fit for use.</p>
-<p>There are often multiple approaches to answering/addressing these questions. This may involve liaising with others within (or outside) your organisation such as data owners to find the answer to a question, accessing and exploring the metadata, or exploring aspects of the dataset/output yourself.</p>
-<p>It is important to have open discussions with your users during this process about their needs. No dataset or output is perfect, but the most crucial element is transparent and clear communication with your users about the data you had, what you did with it, and what that means in terms of quality. This allows the person who is using that statistic to use it in a way which is informed, and any decisions they make with it to include important context.</p>
+<p>Each section contains:</p>
+<ul>
+<li>A description of the dimensions of quality.</li>
+<li>Challenges for each when using secure administrative data.<br />
+</li>
+<li>Questions to guide you through deciding how important each dimension of quality is for your purpose (these decisions should also involve discussions with your users and careful consideration of their needs).<br />
+</li>
+<li>Some “First Steps” questions to introduce assessing each dimension of quality, with some links to more in-depth methods.</li>
+</ul>
+<p>We plan to add more detailed guidance around quality indicators / methods in a future iteration. If you have thoughts or preferences on how we include these, please email <a href="mailto:methods.research@ons.gov.uk" class="email">methods.research@ons.gov.uk</a></p>
+<p>Administrative data must be accessed securely and via legal gateways. Their use represents an opportunity for analysts, however, it is important to remember that the subjects of the data must be protected from misuse. This framework does not support you with making decisions about access to data, however, this is something you need to consider. Your organisation will have data protection policies, such as these <a href="https://www.ons.gov.uk/aboutus/transparencyandgovernance/dataprotection">data protection guidelines from the ONS</a>. If you have questions, you should contact your Data Protection Officer.</p>
+</div>
+<div id="some-core-principles" class="section level2">
+<h2>Some core principles</h2>
+<p>Existing quality guidance, such as the <a href="https://osr.statisticsauthority.gov.uk/publication/administrative-data-and-official-statistics/pages/1/">Quality Assurance of Administrative Data (QAAD)</a> emphasises the idea of proportionality. This is something to bear in mind in any quality assessment, including the present framework. Your assessment of quality should be proportionate to the needs of your users and the resource you have available. This framework has been designed to be flexible, and your approach can be tailored in proportion to your needs. There are three main ways to do this:</p>
+<ul>
+<li>Which / how many quality dimensions you look at.</li>
+<li>How you assess the dimensions, i.e., how in-depth your assessments are in terms of the methods / metrics you use (or if you use metrics at all).</li>
+<li>How you report the information, e.g., whether you produce a short summary covering the most important quality concerns, or a thorough, in-depth report on your entire assessment.</li>
+</ul>
+<p>Also bear in mind that, as society changes, the uses and profile of your statistics and the risks to quality may change, sometimes rapidly. So previous quality assessments should then be revisited in the light of the current situation.</p>
+</div>
+<div id="how-do-i-answer-the-questions-in-this-framework" class="section level2">
+<h2>How do I answer the questions in this framework?</h2>
+<p>Throughout this framework we suggest questions you may want to think about when considering the quality of your data or output. The purpose of this framework is not to answer these questions for you, but to point you towards what you should be thinking about (and doing) in order to understand and judge whether your data or output is fit for use. Quality assessment is as much a thought process as anything else, and should involve curiosity and reflection about how what you are doing matches up to what your users need from you.</p>
+<p>To guide you through this thought process, we set out a number of core questions to ask about the data or output. These are not exhaustive, but should provide a good starting point. There are often multiple approaches to answering or addressing these questions, and it may involve liaising with others within or outside your organisation (e.g. data owners, data suppliers, data acquisition teams, quality teams etc.). Again, this will partly depend on how much time and resource you have available, but some options are listed below to give you an idea:</p>
+<ul>
+<li>Accessing and exploring any metadata, collating existing documentation and knowledge about datasets, and pulling out the core aspects for your purposes.</li>
+<li>Quantitative exploration of the data / output yourself (e.g. calculating metrics such as the percentage of missing values in a variable, looking at distributions, etc.).</li>
+<li>Qualitative exploration of the data / output yourself; this can involve conducting your own qualitative research with staff, or even members of the public, depending on how much time and resource you have. Understanding the context and motivations of those involved in inputting the data will enhance your understanding of its likely quality.</li>
+</ul>
+</div>
+<div id="what-do-i-do-with-the-answers" class="section level2">
+<h2>What do I do with the answers?</h2>
+<p>The Code of Practice for Statistics not only requires us to consider the strengths and limitations of our statistics and data in relation to different users, but also says that these strengths and limitations should be clearly explained alongside the statistics (Practice Q3.1). This is supported by the guidance linked on <a href="https://analysisfunction.civilservice.gov.uk/policy-store/communicating-quality-uncertainty-and-change/">communicating quality, uncertainty and change</a>.</p>
+<p>How you record and communicate the outcomes of applying this framework is largely up to you, and, you guessed it, should be based on your different users’ needs! One common approach is to layer the information in increasing levels of detail:</p>
+<ul>
+<li>The high-level headlines in the statistical bulletin should be accompanied up front with any information on uncertainty that is crucial to their understanding.<br />
+</li>
+<li>Supporting information about sources and methods that is not likely to be required by the non-technical reader can be put in appendices or linked quality reports.<br />
+</li>
+<li>Very detailed information on processes, code, and metadata can be made available through links in the quality reports.</li>
+</ul>
+<p>We plan to add some case study examples to this framework in the future, but in the meantime, some ideas of how to record the outcomes of applying this framework are presented below:</p>
+<ul>
+<li>A strengths and weaknesses report outlining the core aspects of quality for your purposes, and how the data / output measures up to them.</li>
+<li>A detailed report outlining each dimension, how you assessed it, and what the outcome was.</li>
+<li>You could fill in the grids provided within our Input and Output sections, or create your own! Depending on your needs you could include actions needed, decisions taken, or just answers to questions / metrics.</li>
+</ul>
+<p>It is important to have open discussions with your users throughout the quality assessment process about their needs. No dataset or output is perfect, but the most crucial element is transparent and clear communication with your users about the data you had, what you did with it, and what that means in terms of quality. This allows the person who is using that statistic to use it in a way which is informed, and any decisions they make with it to include important context.</p>
 </div>
 
 
@@ -287,7 +375,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -295,23 +383,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

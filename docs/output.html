@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -19,15 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -35,16 +26,12 @@
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -57,7 +44,32 @@ if (window.hljs) {
 
 
 
-
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -69,8 +81,13 @@ if (window.hljs) {
   margin-left: auto;
   margin-right: auto;
 }
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -84,13 +101,40 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
-pre code {
-  padding: 0;
-}
 </style>
 
 
 <style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
 .dropdown-submenu {
   position: relative;
 }
@@ -118,7 +162,7 @@ pre code {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
+  border-left-color: #ffffff;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -130,7 +174,7 @@ pre code {
 }
 </style>
 
-<script type="text/javascript">
+<script>
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -141,23 +185,10 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.tab('show');
+  menuAnchor.parent().addClass('active');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
 });
 </script>
 
@@ -169,6 +200,7 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
+  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -204,7 +236,6 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
-  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -217,9 +248,48 @@ $(document).ready(function () {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 
 
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <style type="text/css">
 
@@ -233,12 +303,6 @@ $(document).ready(function () {
 }
 }
 
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
 
 .toc-content {
   padding-left: 30px;
@@ -274,6 +338,8 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -294,13 +360,13 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -332,7 +398,7 @@ div.tocify {
           </div><!--/.container -->
         </div><!--/.navbar -->
 
-<div id="header">
+<div class="fluid-row" id="header">
 
 
 
@@ -341,22 +407,19 @@ div.tocify {
 </div>
 
 
-<div id="draft-guidance---open-for-feedback" class="section level2">
-<h2>DRAFT GUIDANCE - OPEN FOR FEEDBACK</h2>
-</div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <p>This part of the framework focusses on the quality of your outputs. In this context, output is defined broadly as a statistic that is officially published, or one that is used for further research/analysis. Quality at this stage refers to how well your ‘final’ output meets your users’ needs.</p>
-<p>This section of the framework uses the Eurostat’s European Statistics (ESSnet) five dimensions of quality to help guide your thinking on what aspects of quality are most important for your output needs. These dimensions are:</p>
+<p>This section of the framework uses the Eurostat’s European Statistics five dimensions of quality to help guide your thinking on what aspects of quality are most important for your output needs. These dimensions are:</p>
 <ul>
-<li>Relevance</li>
-<li>Accuracy &amp; Reliability</li>
-<li>Timeliness &amp; Punctuality</li>
-<li>Accessibility &amp; Clarity</li>
-<li>Coherence &amp; Comparability.</li>
+<li><p>Relevance</p></li>
+<li><p>Accuracy &amp; Reliability</p></li>
+<li><p>Timeliness &amp; Punctuality</p></li>
+<li><p>Accessibility &amp; Clarity</p></li>
+<li><p>Coherence &amp; Comparability</p></li>
 </ul>
-<p>We have selected these dimensions because they have been developed by experts to assess fitness for purpose of statistical outputs.</p>
-<p>In the Input Stage of the framework, we discussed that when using administrative datasets, you will often be limited by the data you can access and the purpose of its collection (often different from what you are now using it for). These limitations will feed through into the output you produce.</p>
+<p>We have selected these dimensions because they have been developed by experts to assess the fitness for purpose of statistical outputs.</p>
+<p>In the Input Stage of the framework, we discussed that when using administrative datasets, you will often be limited by the data you can access and the purpose of their collection (often different from what you are now using them for). These limitations will feed through into the output you produce.</p>
 <p>What you need to do is understand and tell the users what the quality of your output is based on the data and methods you used.</p>
 <p>This section briefly explains:</p>
 <ul>
@@ -365,9 +428,10 @@ div.tocify {
 <li><p>Questions you can ask yourself to decide whether this dimension is important for you.</p></li>
 </ul>
 <p>You can use this grid and the text in this section to help you summarise and prioritise the dimensions you need, and some priority next steps.</p>
-<p><img src="Output%20Matrix.jpg" alt=" Table with the 5 dimensions of statistical outputs as columns. Rows have the following names: User needs, Resources available, Potential risks, Actions needed"
-    title="Output dimensions decision matrix" width="850" /></p>
-<p>For the dimensions which are very important to your user, you will need to do some detailed work to measure quality. Much work has been done on producing detailed measurements of quality for each of the dimensions, and the measuring of error. For brevity, detailed description of the methods have not been included here, although we have linked to further reading. Would you like them to be? Email <a href="mailto:DQHub@ons.gov.uk" class="email">DQHub@ons.gov.uk</a> with your feedback.</p>
+<p><img src="Output%20Matrix.jpg" alt="with the five dimensions of statistical outputs as columns; relevance, accuracy and reliability, timeliness and punctuality, accessibility and clarity, coherence and comparability. Rows have the following names: user needs, resources available, potential risks, actions needed"
+    title="Output dimensions decision matrix: columns are the five quality dimensions for statistical outputs; relevance, accuracy and reliability, timeliness and punctuality, accessibility and clarity, coherence and comparability. Rows have the following names; user needs, resources available, potential risks, actions needed" width="850" /></p>
+<p>For the dimensions which are very important to your user, you will need to do some detailed work to measure quality. Much work has been done on producing detailed measurements of quality for each of the dimensions, and the measuring of error. Currently, detailed descriptions of the methods have not been included here, although we have linked to further reading. We plan to add more guidance around indicators in a future iteration. If you would like to feed into this work, please email <a href="mailto:methods.research@ons.gov.uk" class="email">methods.research@ons.gov.uk</a>.</p>
+<p>We also advise that you consider this section of the framework in the context of the <a href="https://osr.statisticsauthority.gov.uk/guidance/administrative-data-and-official-statistics/quality-assurance-four-key-areas-of-practice/">QAAD’s four practice areas</a>. These areas should help you to take a step back to think about the bigger picture of the quality issues that will be relevant when people start using the statistics. In particular, the <a href="https://osr.statisticsauthority.gov.uk/publication/administrative-data-quality-assurance-toolkit/">QAAD toolkit</a> could be helpful here, to enable you to evaluate the range of quality issues present, and explain the key quality messages to your users to support their decision making.</p>
 </div>
 <div id="relevance" class="section level2">
 <h2>Relevance</h2>
@@ -382,7 +446,7 @@ div.tocify {
 </div>
 <div id="administrative-data-considerations" class="section level3">
 <h3>Administrative data considerations</h3>
-<p>The main risk to relevance happens when the target concepts (what you are interested in, for example, unemployment) and outputs (the statistic you need to produce; percentage of people unemployed) are not properly understood when planning the statistical process, and when the data sources available don’t capture these targets. Sometimes when producing statistics using administrative data, this latter point is inevitable – the data is typically pre-defined, and you have to work with what you have. You must communicate this rationale to your users, identify where there are risks to relevance, and check this with your users.</p>
+<p>The main risk to relevance happens when the target concepts (what you are interested in, for example, unemployment) and outputs (the statistic you need to produce; percentage of people unemployed) are not properly understood when planning the statistical process, and when the data sources available don’t capture these targets. Sometimes when producing statistics using administrative data, this latter point is inevitable – the data are typically pre-defined, and you have to work with what you have. You must communicate this rationale to your users, identify where there are risks to relevance, and check this with your users.</p>
 </div>
 <div id="first-steps" class="section level3">
 <h3>First steps</h3>
@@ -396,8 +460,8 @@ div.tocify {
 </ul>
 <p>The <em>crucial</em> element to this process is not just understanding the relevance of your output, but communicating this understanding to your users. Without this, people using the output may not use it appropriately, as they may not realise it is telling them something different from what they expected.</p>
 <p>In essence, after processing and analysis, does what you have produced match what was needed – if not, how does it differ and what does this mean for the user? It is also important to note that user needs may change over time. Regular communication with your users is necessary to ensure you are still on track to produce something relevant to their needs.</p>
-<p>There may also be an element of iteration to this process. If your users want something that your methods/processing simply cannot produce with the administrative data that you have, you may want to work with them to get to something that is possible and still useful for them. Or, if you have the time and resource, it may even be possible to develop/apply new statistical methods to adjust the data.</p>
-<p>This section should have given you an overview of where to start when assessing relevance at output level, as well as some basic questions to guide your thinking. If you need something more in depth, ESSnet (<a href="https://ec.europa.eu/eurostat/cros/system/files/SGA%202011_Deliverable_6.5.pdf">Appendix A, pg 202 SGA 2011_Deliverable_6.5.pdf (europa.eu)</a>) have developed a number of qualitative indicators that may help further guide you through this process in a structured way.</p>
+<p>There may also be an element of iteration to this process. If your users want something that your methods and processing simply cannot produce with the administrative data that you have, you may want to work with them to get to something that is possible and still useful for them. Or, if you have the time and resource, it may even be possible to develop / apply new statistical methods to adjust the data.</p>
+<p>This section should have given you an overview of where to start when assessing relevance at output level, as well as some basic questions to guide your thinking. If you need something more in depth, ESSnet have developed a number of qualitative indicators that may help further guide you through this process in a structured way. These can be found in Appendix A of “<a href="https://www.academia.edu/78989386/ESSNET_USE_OF_ADMINISTRATIVE_AND_ACCOUNTS_DATA_IN_BUSINESS_STATISTICS_WP6_Quality_Indicators_when_using_Administrative_Data_in_Statistical_Outputs_Final_list_of_quality_indicators_and_associated_guidance_Final_list_of_quality_indicators_and_associated_guidance">Final list of quality indicators and associated guidance</a>”.</p>
 </div>
 </div>
 <div id="accuracy-and-reliability" class="section level2">
@@ -405,7 +469,7 @@ div.tocify {
 <div id="definition-1" class="section level3">
 <h3>Definition</h3>
 <p>Accuracy is the closeness between an estimated result (what you have produced) and the (unknown) true value (what you wanted to describe).</p>
-<p>Reliability is the closeness of what you have currently produced to earlier estimates for the same period. This is a particular definition with roots in economic statistics that may be different to what you may have thought of as reliability in different settings. It is not how likely you are to get an answer with repeated measures. It is a measure of how your estimates need to be revised over time.</p>
+<p>Reliability is the closeness of what you have currently produced to earlier estimates for the same period. This is a particular definition with roots in economic statistics that may be different from what you may have thought of as reliability in different settings. It is not how likely you are to get an answer with repeated measures. It is a measure of how your estimates need to be revised over time.</p>
 <p>Accuracy is often wrongly equated as the only important quality dimension, however, there may be higher priority quality dimensions for your purpose. For example, during the COVID-19 pandemic, there have been some trade-offs made with accuracy and timeliness, due to the urgent need for information.</p>
 </div>
 <div id="is-this-dimension-important-to-me-1" class="section level3">
@@ -417,24 +481,24 @@ div.tocify {
 <li><p>Will spending more time and money on measuring and improving accuracy involve sacrifices with the other dimensions (for example, timeliness or relevance)?</p></li>
 <li><p>How much resource do I have?</p></li>
 <li><p>What is needed and possible with the data and methods I am using?</p></li>
-<li><p>What are the risks to publishing inaccurate/unreliable outputs?</p></li>
+<li><p>What are the risks to publishing inaccurate or unreliable outputs?</p></li>
 </ul>
 <p>You may feel that needs of other dimensions override needs for accuracy for your scenario. Or, it may be that it is not possible to produce a highly accurate, reliable, output with the time and resources you have. In these situations, you should communicate your thoughts with your user and jointly decide, with them, how to prioritise the dimensions. Guidance for how to publish quality information of this type can be found here.</p>
 </div>
 <div id="administrative-data-considerations-1" class="section level3">
 <h3>Administrative data considerations</h3>
 <p>Accuracy is often described in terms of bias and variance however, you may need to take slightly different steps when using administrative data compared to other data sources where you have designed the data collection to answer your question. Your methods and processing will have been more complex, and you may have been linking one or more datasets which have differing levels of accuracy to begin with. You may also be linking multiple datasets over time. You will therefore need to take different steps to measure the various types of errors that could have arisen from these situations.</p>
-<p>In the specific context of longitudinally linked administrative data, a separate framework has been developed by ONS which you can find a <a href="https://www.ons.gov.uk/releases/astatisticalqualityframeworkforlongitudinallylinkedadministrativedataoninternationalmigration">link to here</a>. This provides guidance on how to think about and assess quality in this complex situation.</p>
-<p>For reliability, you may want to publish an early estimate knowing that the full data will take longer to acquire. Your output may change as you get more information. When you get the data you need, or more knowledge about the methods you need to use you may choose to publish a second, more reliable estimate.</p>
+<p>In the specific context of longitudinally linked administrative data, a separate <a href="https://www.ons.gov.uk/releases/astatisticalqualityframeworkforlongitudinallylinkedadministrativedataoninternationalmigration">framework for longitudinally linked administrative data</a> has been developed by ONS. This provides guidance on how to think about and assess quality in this complex situation.</p>
+<p>For reliability, you may want to publish an early estimate knowing that the full data will take longer to acquire. Your output may change as you get more information. When you get the data you need, or more knowledge about the methods you need to use, you may choose to publish a second, more reliable estimate.</p>
 </div>
 <div id="first-steps-1" class="section level3">
 <h3>First steps</h3>
-<p>The easiest place to start with accuracy is to compare what you have produced with a similar output which you know the accuracy of (if there is a suitable one available). This can be from a survey or another administrative data source. If your output varies from your benchmark, it may highlight that there are some issues with what you have produced.</p>
+<p>The easiest place to start with accuracy is to compare what you have produced with a similar output that you know the accuracy of (if there is a suitable one available). This can be from a survey or another administrative data source. If your output varies from your benchmark, it may highlight that there are some issues with what you have produced.</p>
 <p>For reliability across time, you should compare your latest estimate to an earlier estimate of the same parameter. If your data are time-stamped, you can test the likely impact using previous rounds of data.</p>
 <p>For both, you should take steps to model the difference between your output and the thing you are comparing it against. Is this a change in reality or a change in accuracy? An unexpected output (compared to previous estimates) may suggest a problem with accuracy or reliability (e.g. poor data collection that year), or it could be reflecting a genuine change in the thing you are measuring. It is worthwhile to remember that this isn’t a fool proof approach; similar values to what you expected may also be masking a change in the real world due to inaccurate or unreliable data.</p>
 <p>Although the theory for measuring error when using admin data is less established than for survey sources, there has been some important work done in this space. If highly accurate outputs are important to your user, or you do not have a baseline to compare with, you will need to quantify the error using more detailed methods.</p>
-<p>For a more detailed assessment of accuracy, ESSnet (<a href="https://ec.europa.eu/eurostat/cros/system/files/SGA%202011_Deliverable_6.5.pdf">Appendix A, pg 205 SGA 2011_Deliverable_6.5.pdf (europa.eu)</a>) have developed a number of qualitative indicators that may help guide you through this thinking process in a structured way. There is also ongoing work on various methods that can be used to quantify elements of accuracy, which you may decide you would like to look in to.</p>
-<p><strong>There is ongoing work on the assessment of accuracy of administrative data. We will add links as they appear</strong></p>
+<p>For a more detailed assessment of accuracy, ESSnet have developed a number of indicators that may help guide you through this thinking process in a structured way, which you can find in Appendix A of “<a href="https://www.academia.edu/78989386/ESSNET_USE_OF_ADMINISTRATIVE_AND_ACCOUNTS_DATA_IN_BUSINESS_STATISTICS_WP6_Quality_Indicators_when_using_Administrative_Data_in_Statistical_Outputs_Final_list_of_quality_indicators_and_associated_guidance_Final_list_of_quality_indicators_and_associated_guidance">Final list of quality indicators and associated guidance</a>”. There is also ongoing work on various methods that can be used to quantify elements of accuracy, which you may decide you would like to look in to.</p>
+<p><strong>There is ongoing work on the assessment of accuracy of administrative data. We will add links as they appear.</strong></p>
 <p>Finally, you should think about how to communicate any assessments of accuracy/measurement error and reliability. It is typically recommended to publish methods used for processing and analysis, and clear, transparent communication about these is particularly important for administrative data methods, which are often new or have been adapted from survey methods.</p>
 </div>
 </div>
@@ -447,13 +511,13 @@ div.tocify {
 </div>
 <div id="is-this-dimension-important-to-me-2" class="section level3">
 <h3>Is this dimension important to me?</h3>
-<p>There are specific guidelines around timeliness and punctuality. In line with The Code of Practice (<a href="https://www.statisticsauthority.gov.uk/code-of-practice/guidance/helpful-resources-producing-official-statistics/">link to the code</a>), regular and ad-hoc official statistics need to be pre-announced via a 12-month release calendar. A specific release date should also be given at least 4 weeks in advance (if possible). Any changes to these release dates must be approved by the Head of Profession for Statistics or the Chief Statistician and should be communicated to users alongside the reason for the change.</p>
-<p>You may, however, find yourself in a position where you need to make a trade-off between timeliness and other dimensions of quality – for example, you may have to compromise on accuracy in order to get your statistic published on time. This is particularly the case with administrative data, where sometimes due to the format you receive the data in, it requires a lot of processing and manipulation to be useable. Some things to consider when making trade-offs include:</p>
+<p>There are specific guidelines around timeliness and punctuality. In line with <a href="https://www.statisticsauthority.gov.uk/code-of-practice/guidance/helpful-resources-producing-official-statistics/">The Code of Practice</a>), regular and ad-hoc official statistics need to be pre-announced via a 12-month release calendar. A specific release date should also be given at least 4 weeks in advance (if possible). Any changes to these release dates must be approved by the Head of Profession for Statistics or the Chief Statistician and should be communicated to users alongside the reason for the change.</p>
+<p>You may, however, find yourself in a position where you need to make a trade-off between timeliness and other dimensions of quality – for example, you may have to compromise on accuracy in order to get your statistic published on time. This is particularly the case with administrative data, where sometimes due to the format you receive the data in, they require a lot of processing and manipulation to be useable. Some things to consider when making trade-offs include:</p>
 <ul>
 <li><p>Do you have time to assess the other quality dimensions before publishing your statistic?</p></li>
 <li><p>If not, which are the highest priority and which could you compromise on?</p></li>
 <li><p>If compromises are made, what is the impact on the end-product and how can this be communicated?</p></li>
-<li><p>If this statistic is delayed, what is the cost to the users/wider society, and what is the cost to your institute’s reputation?</p></li>
+<li><p>If this statistic is delayed, what is the cost to the users and wider society, and what is the cost to your institute’s reputation?</p></li>
 </ul>
 <p>There are also ways you can manage trade-offs. For example, you could produce scheduled revisions to statistics. The first revision may be less accurate but more timely, and the second revision less timely but more accurate once you’ve had a chance to gather more data and validate it.</p>
 <p>You could also discuss alternative options with your user, for example, broadening the level of geographic detail to national rather than local authority outputs, or focus on a select number of key local authorities first, with the rest to follow.</p>
@@ -461,7 +525,7 @@ div.tocify {
 </div>
 <div id="administrative-data-considerations-2" class="section level3">
 <h3>Administrative data considerations</h3>
-<p>In an administrative data context, there are many factors which can impact timeliness and punctuality. For example, you may have limited control over data collection and accessibility, which affects how quickly you can process and analyse to produce your statistic. You may also need to do a considerable amount of processing and cleaning to get the data in a format that is suitable for your methods and analysis, which can take additional time. As mentioned in the input section of this framework, it is important to think about these things beforehand, so that you can factor in timeliness and punctuality needs ahead of time.</p>
+<p>In an administrative data context, there are many factors which can impact timeliness and punctuality. For example, you may have limited control over data collection and accessibility, which affects how quickly you can process and analyse to produce your statistic(s). You may also need to do a considerable amount of processing and cleaning to get the data in a format that is suitable for your methods and analysis, which can take additional time. As mentioned in the input section of this framework, it is important to think about these things beforehand, so that you can factor in timeliness and punctuality needs ahead of time.</p>
 </div>
 <div id="first-steps-2" class="section level3">
 <h3>First steps</h3>
@@ -471,7 +535,7 @@ div.tocify {
 <li><p>Can you plan your processing and analysis around this? If not, what impact does this have on the timeliness and punctuality of the output?</p></li>
 <li><p>If there is an impact on timeliness and punctuality for any reason, will your statistic still be released in time to be of value to your customers?</p></li>
 </ul>
-<p>Sometimes substantial time lags may be unavoidable. However, understanding the things that can impact timeliness and punctuality (e.g. when data is received and accessible, how long it will take to process) can enable more effective planning around potential obstacles. The important thing here, again, is where there is any compromise to this dimension, it should be communicated to the users, quantified if possible, and the implications clearly outlined.</p>
+<p>Sometimes substantial time lags may be unavoidable. However, understanding the things that can impact timeliness and punctuality (e.g. when data are received and accessible, how long they will take to process) can enable more effective planning around potential obstacles. The important thing here, again, is where there is any compromise to this dimension, it should be communicated to the users, quantified if possible, and the implications clearly outlined.</p>
 </div>
 </div>
 <div id="accessibility-and-clarity" class="section level2">
@@ -487,27 +551,27 @@ div.tocify {
 <h3>Is this dimension important to me?</h3>
 <p>Government has a responsibility to make sure that what we produce can be used and understood by the people who are using our statistics. You may, however, need to make trade-offs to ensure that what you are producing meets the needs of your users. For example, you may need to provide a more detailed explanation to ensure the output is presented accurately, and this may be more difficult to understand for some users. Questions you can ask yourself in order to help you here are:</p>
 <ul>
-<li><p>Who is the user, and what do they want/need to know about the output and how you got to it? To what level?</p></li>
+<li><p>Who is the user, and what do they want / need to know about the output and how you got to it? To what level?</p></li>
 <li><p>Was the data journey particularly complex? How much detail do my users need to know?</p></li>
 </ul>
 </div>
 <div id="administrative-data-considerations-3" class="section level3">
 <h3>Administrative data considerations</h3>
-<p>The administrative data journey from data collection to statistical output may be less easy to define than with a survey which you have designed. This may make it harder for you to explain to the users of your output. You may not have access to all the information you need in order to tell the full story of how the data was collected, linked and processed to reach the output, or it may be very difficult to explain it in a way that people can readily understand.</p>
+<p>The administrative data journey from data collection to statistical output may be less easy to define than with a survey which you have designed. This may make it harder for you to explain to the users of your output. You may not have access to all the information you need in order to tell the full story of how the data were collected, linked and processed to reach the output, or it may be very difficult to explain it in a way that people can readily understand.</p>
 <p>It may also be difficult to know what data you can publish with your output, particularly if this has come from a different source.</p>
-<p>As the data has been collected elsewhere, it may not conform to an agreed upon standard that makes it available for people to access and use.</p>
+<p>As the data have been collected elsewhere, they may not conform to an agreed upon standard that makes it available for people to access and use.</p>
 </div>
 <div id="first-steps-3" class="section level3">
 <h3>First steps</h3>
 <p>When you acquired the data, did you agree what could be shared and with whom? This information can sometimes be difficult to pin down, as people become afraid of the risks of publishing and sharing data, however, we have a responsibility to ensure our outputs and the decision making done with them are as transparent as possible. See the first phase of this guidance for information on fruitful conversations with suppliers.</p>
-<p>You may have data acquisition teams in your department who can help you decide to what degree you can publish the data which has been shared with you. This should always comply with the latest data protection legislation; you will have data protection officers in your organisation who can provide further support.</p>
+<p>You may have data acquisition teams in your department who can help you decide to what degree you can publish the data which have been shared with you. This should always comply with the latest data protection legislation; you will have data protection officers in your organisation who can provide further support.</p>
 <p>For the output, you will need to decide what the best way to display the information is for them (both the output and how you reached it). Note that some of the technical report should be filtered into the main bulletin in a digestible way, and uncertainty information should also be in the main bulletin.</p>
 <p>Some questions to guide you through this include:</p>
 <ul>
 <li><p>Have you mapped the data journey from output to statistic? The QAAD toolkit and QAAD workshops can help you. Email the <a href="mailto:DQHub@ons.gov.uk" class="email">DQHub@ons.gov.uk</a> for support with conducting one of these workshops.</p></li>
 <li><p>What is the best way for me to present this information? Think about your audience and how they will best access this information. How have other outputs been displayed?</p></li>
-<li><p>Does what I am providing meet accessibility requirements (link to government guidance on accessibility)?</p></li>
-<li><p>How well does the data I am publishing conform to common standards and protocols?</p></li>
+<li><p>Does what I am providing meet accessibility requirements?</p></li>
+<li><p>How well do the data I am publishing conform to common standards and protocols?</p></li>
 </ul>
 <p>It may be useful to workshop the above questions with the team involved in creating the output. You may also have teams in your organisation who are responsible for checking the accessibility and clarity of your outputs, and they may have their own checklists and guidance on this.</p>
 </div>
@@ -518,7 +582,7 @@ div.tocify {
 <h3>Definition</h3>
 <p><em>“Producers must demonstrate that they do not simply publish a set of numbers, but that they explain how they relate to other data on the topic, and how they combine with other statistics to better explain the part of the world they describe.”</em></p>
 <p>Code of Practice for Statistics, UK Statistics Authority, 2018</p>
-<p><em>Coherence</em> refers to the extent to which the statistical processes used to generate multiple outputs align in terms of the concepts and harmonised methods used. In essence, how similar are statistics that refer to the same phenomenon, but that have been derived from different sources/methods?</p>
+<p><em>Coherence</em> refers to the extent to which the statistical processes used to generate multiple outputs align in terms of the concepts and harmonised methods used. In essence, how similar are statistics that refer to the same phenomenon, but that have been derived from different sources / methods?</p>
 <p><em>Comparability</em> refers to the degree to which data or statistics can be compared, both over time and region or domain. Information about both comparability and coherence should be monitored and reported to users over time, in line with the UK Code of Practice.</p>
 </div>
 <div id="is-this-dimension-important-to-me-4" class="section level3">
@@ -527,33 +591,33 @@ div.tocify {
 <ul>
 <li><p>Is your statistic going to be used in combination with other statistics on the same topic?</p></li>
 <li><p>Are the trends and patterns shown likely to be compared with other statistics on the same topic?</p></li>
-<li><p>Has it been produced using new/different methods from those typically used?</p></li>
+<li><p>Has it been produced using new or different methods from those typically used?</p></li>
 <li><p>How important is it that your statistic is similar to others?</p></li>
 <li><p>Is this output being used to make comparisons with other areas? Or time periods?</p></li>
 <li><p>How essential is being able to compare with other regions to my user?</p></li>
-<li><p>Has the output been produced previously/in other areas in a way which is up to date/uses the methods I need?</p></li>
+<li><p>Has the output been produced previously / in other areas in a way which is up to date / uses the methods I need?</p></li>
 </ul>
 </div>
 <div id="administrative-data-considerations-4" class="section level3">
 <h3>Administrative data considerations</h3>
 <p>As noted in the input section, when working with administrative data (or administrative combined with survey data), the concepts, definitions, and classifications between the administrative source and statistical product may differ. For example, the population, units, variables, time reference, and even the definitions of these concepts may not be the same, which should be outlined to the output user. As also noted in the input section, you may have made adjustments due to these differences, by using a certain type of processing or method.</p>
-<p>For example, even if the collection of data or way it is processed is not coherent, methods can be developed or adopted to make the statistic comparable at output level, e.g. aggregation or derivation of variables.</p>
-<p>Whatever the case, this should be agreed/discussed with and communicated to the user, so they can fully assess how coherent the resulting output is with other statistics: why was the adjustment made? How was it made? What is the impact on the end product?</p>
-<p>Comparability in an administrative data context can be impacted by factors outside your control, for example there may be policy or process changes which means the way the data is delivered, its processing needs, and the methods used to produce statistics from it changes. This is particularly relevant for time series statistics.</p>
+<p>For example, even if the collection of data or way they are processed is not coherent, methods can be developed or adopted to make the statistic comparable at output level, e.g. aggregation or derivation of variables.</p>
+<p>Whatever the case, this should be agreed / discussed with and communicated to the user, so they can fully assess how coherent the resulting output is with other statistics: why was the adjustment made? How was it made? What is the impact on the end product?</p>
+<p>Comparability in an administrative data context can be impacted by factors outside your control, for example there may be policy or process changes which means the way the data are delivered, their processing needs, and the methods used to produce statistics from them changes. This is particularly relevant for time series statistics.</p>
 <p>Additionally, comparability may be particularly relevant if you are moving from an output produced with survey data to one produced with administrative data. In this case, it is especially important to think about, assess, and communicate how the outputs are affected, the reasons behind these differences, and how any inconsistencies have been dealt with.</p>
-<p>When there is a change in methods or data sources/quality, there may be a break in the time series so that statistics produced before the change are not comparable to those produced after it. Sometimes this reflects an improvement! Perhaps a more suitable data source becomes available, and you can produce more accurate statistics in more detail (trading off comparability for accuracy). Or, alternatively, perhaps the way the administrative source delivers the data means you need to apply different processing or linkage methods. In either case, the statistic you produce after this may no longer be comparable to previous ones on the same topic. This usually means that measures of change become unreliable. The implications of this should be considered and discussed with your user, especially if the primary purpose of the statistic is to compare it with previous or similar statistics.</p>
+<p>When there is a change in methods or data sources / quality, there may be a break in the time series so that statistics produced before the change are not comparable to those produced after it. Sometimes this reflects an improvement! Perhaps a more suitable data source becomes available, and you can produce more accurate statistics in more detail (trading off comparability for accuracy). Or, alternatively, perhaps the way the administrative source delivers the data means you need to apply different processing or linkage methods. In either case, the statistic you produce after this may no longer be comparable to previous ones on the same topic. This usually means that measures of change become unreliable. The implications of this should be considered and discussed with your user, especially if the primary purpose of the statistic is to compare it with previous or similar statistics.</p>
 </div>
 <div id="first-steps-4" class="section level3">
 <h3>First steps</h3>
 <p>Crucial things to think about at this stage are:</p>
 <ul>
-<li><p>How does your output compare to others with the same theme/topic? Does it ‘tell the same story’ as similar outputs from other sources that may have been produced in a different way?</p></li>
+<li><p>How does your output compare to others with the same theme / topic? Does it ‘tell the same story’ as similar outputs from other sources that may have been produced in a different way?</p></li>
 <li><p>If not, do you know why? By how much does yours differ from others?</p></li>
 <li><p>How have you processed the data to produce your statistic? Are you using the same methods as before? If not, are there output implications to communicate to your users?</p></li>
 <li><p>Has the way you processed the data changed? Are you doing anything differently between getting the data and producing the statistic?</p></li>
 <li><p>Does this have any impact on the outputs produced? What is needed – a resolution, or discussion/clear communication with your users?</p></li>
 </ul>
-<p>If your statistic is not coherent or comparable with others, this isn’t necessarily a bad thing. The extent of the difference should be examined, and reasons for it explored. For example, you may be using a novel method (or dataset) that produces more accurate estimates, in which case it may be a good thing that yours differs from other statistics on the same topic! Understanding the reasons behind incoherence, and whether they are expected/unexpected, and acceptable is what you should be aiming for. It is also important that clear, transparent communication is present (in the form of a report or publication) about methods, how they’ve been used, along with clearly annotated code and analysis of performance.</p>
+<p>If your statistic is not coherent or comparable with others, this isn’t necessarily a bad thing. The extent of the difference should be examined, and reasons for it explored. For example, you may be using a novel method (or dataset) that produces more accurate estimates, in which case it may be a good thing that yours differs from other statistics on the same topic! Understanding the reasons behind incoherence, and whether they are expected or unexpected, and acceptable is what you should be aiming for. It is also important that clear, transparent communication is present (in the form of a report or publication) about methods, how they’ve been used, along with clearly annotated code and analysis of performance.</p>
 </div>
 </div>
 
@@ -568,56 +632,13 @@ div.tocify {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
 });
 
 
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
