@@ -2,21 +2,67 @@
 title: "Home"
 ---
 
-## DRAFT GUIDANCE - OPEN FOR FEEDBACK 
+## Administrative data
 
-This framework is to help you assess the quality of administrative data for use in the production of official statistics. 
+This framework aims to help you assess the quality of administrative data for use in the production of official statistics. 
 
-Administrative data is data which has been collected during the operations of an organisation. Government produces a very large amount of administrative data, providing a valuable resource if it can be used correctly. 
+Administrative data are data which have been collected during the operations of an organisation. Government produces a very large amount of administrative data, providing a valuable resource if it can be used correctly. There are legal gateways which can allow accredited and approved researchers to access administrative data for research and statistical purposes. There are certain criteria to meet to ensure this can happen, including the assurance that a person’s identity cannot be identified in the information disclosed for research and statistics. 
 
-There are legal gateways which can allow accredited and approved researchers to access administrative data for research and statistical purposes. There are certain criteria to meet to ensure this can happen including the assurance that a person’s identity cannot be identified in the information disclosed for research and statistics. 
+Administrative data are generally not collected for the sole purpose of producing statistics. This can lead to challenges when using it for this reason, a summary of which can be found in David Hand’s paper, [“Statistical challenges of administrative and transaction data”.](https://rss.onlinelibrary.wiley.com/doi/10.1111/rssa.12315). 
 
-However, the data has not been collected for the sole purpose of creating a statistic, and this can lead to challenges when using it for this reason. A summary of these can be found [here](https://rss.onlinelibrary.wiley.com/doi/10.1111/rssa.12315). 
+## What is quality?
 
+According to the [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/the-code/quality/), “quality means that statistics fit their intended uses, are based on appropriate data and methods, and are not materially misleading.” 
 
-Quality is defined as fitness for purpose - is this data set good enough for what I want to use it for? Did the statistic I produce meet the needs of the people who are using it? 
+In essence, quality centres around a consideration of fitness for purpose: 
 
-If you are using data for a purpose that is different to the reason it was originally collected, there should be an assessment of quality to ensure that the data and resulting output meet your needs.
+* Is this data set good enough for what I want to use it for?  
 
-The first step in any quality assessment is deciding what quality looks like for your scenario. What does the data need to do and have to ensure you can do what you need? 
+* Did the statistic I produce meet the needs of the people who are using it? 
 
-This decision factors in not only what high quality is to you and your user, but also the time & information you have, as well as any costs associated with conducting assessments or improving aspects of quality.  
+Quality assessments are important in all contexts, to ensure that the data and resulting outputs meet your needs. In an administrative data context however, as the data are often used for a purpose that is different from the reason for initial collection, there are some unique considerations to make. 
+
+The first step in any quality assessment is deciding what quality looks like for your scenario. What do the data need to do and have, to ensure you can produce what you need? 
+
+These decisions should not only factor in what high quality is to you and your user, but also the time and information you have, and any costs associated with conducting assessments or improving aspects of quality. Proportionality is a core principle of quality assessment (discussed more below). 
+
+## Quality assessment
+
+Quality is a complex area, and these are not simple decisions to make. There is not one single tool that provides every answer; we recommend developing a quality assessment procedure that draws together guidance from various packages of work.  
+
+This framework is one piece of the puzzle, but there are also other tools that can help you understand quality and the higher-level principles associated with quality assessment. Some of these are outlined below. 
+
+[Code of Practice for Statistics (CoP)](https://code.statisticsauthority.gov.uk/the-code/):
+
+* The CoP is based on three pillars; Trustworthiness, Quality and Value. Each one outlines principles and practices that official statistics producers should commit to. 
+* There are also three areas of practice that cut across multiple pillars; Collaboration, Coherence, and Transparency. 
+* Further guidance, resources, and case studies for each principle can be found at this link to the [Code of Practice for Statistics](https://code.statisticsauthority.gov.uk/the-code/). 
+
+[Quality Assurance of Administrative Data (QAAD)](https://osr.statisticsauthority.gov.uk/publication/administrative-data-and-official-statistics/pages/1/): 
+
+* The Office for Statistics Regulation has developed a regulatory standard consistent with the Code of Practice, for the quality assurance of administrative data that are used to produce official statistics. 
+* This link to the accompanying [QAAD toolkit](https://osr.statisticsauthority.gov.uk/wp-content/uploads/2019/02/qualityassurancetoolkit_updated_Feb19_2.pdf) aims to help you apply the guidance in practice.
+* The QAAD focusses on the quality assurance arrangements that are required for statistics compiled using administrative data to comply with the Code of Practice. Our framework takes a slightly different angle, providing general guidance on how to assess the quality of your data / output using various quality dimensions. 
+* You should use the QAAD as part of your quality assurance process, as it is a regulatory standard. How you use our framework is largely up to you; you may want to build it into a structured assessment of quality alongside the QAAD, or you may want to use it in a more casual, exploratory way (or anything in between!). 
+* The QAAD centres around four key practice areas:
+    1. Operational context and admin data collection
+    2. Communication with data supply partners
+    3. Quality assurance principles, standards, and checks by data suppliers
+    4. Producers’ quality assurance investigations and documentation
+* The QAAD also emphasises the idea of proportionality, and the [QAAD toolkit](https://osr.statisticsauthority.gov.uk/wp-content/uploads/2019/02/qualityassurancetoolkit_updated_Feb19_2.pdf) includes a helpful risk / profile matrix to help you determine the appropriate level of assurance to apply. 
+
+[Generic Statistical Business Process Model (GSBPM)](https://statswiki.unece.org/display/GSBPM/I.+Introduction#I.Introduction-_Toc375051192): 
+
+* The GSBPM describes and defines the set of business processes involved in producing official statistics.  
+* It includes a framework with harmonised terminology to help with the statistical production processes, and includes guidance, indicators, and many other helpful tools. 
+
+## Planned developments to this framework
+
+We plan to add to this framework over time with other useful resources, tools, and guidance that we find and develop, and to better integrate with the other existing tools. Current planned developments are outlined below: 
+
+* The addition of case studies to help outline how others have applied this framework and used it to quality assess data or outputs. 
+* More detailed guidance on quality indicators / metrics / methods for the different dimensions. 
+* A link to an Error Catalogue that has been developed, outlining the different errors that can occur when using administrative data for statistical purposes, alongside proposed methods for measuring / addressing them. 
+* A link to a Conversation Toolkit to assist with communications with suppliers and asking questions about the quality of administrative data sources. 
+* A section covering the methodology / processing phase of the administrative data journey. 
+* A process map outlining the different tools and guidance in the administrative data quality space, and at what stage you might want to use them. 
