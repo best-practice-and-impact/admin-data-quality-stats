@@ -21,13 +21,13 @@ This section of the framework uses the Eurostat’s European Statistics five dim
 
 * Relevance
 
-* Accuracy & Reliability
+* Accuracy and Reliability
 
-* Timeliness & Punctuality
+* Timeliness and Punctuality
 
-* Accessibility & Clarity
+* Accessibility and Clarity
 
-* Coherence & Comparability
+* Coherence and Comparability
 
 We have selected these dimensions because they have been developed by experts to assess the fitness for purpose of statistical outputs.  
 
@@ -45,7 +45,7 @@ This section briefly explains:
 
 You can use this grid and the text in this section to help you summarise and prioritise the dimensions you need, and some priority next steps. 
 
-<img src="Output Matrix.jpg" alt="with the five dimensions of statistical outputs as columns; relevance, accuracy and reliability, timeliness and punctuality, accessibility and clarity, coherence and comparability. Rows have the following names: user needs, resources available, potential risks, actions needed"
+<img src="Output Matrix2.JPG" alt="with the five dimensions of statistical outputs as columns; relevance, accuracy and reliability, timeliness and punctuality, accessibility and clarity, coherence and comparability. Rows have the following names: user needs, resources available, potential risks, actions needed"
 	title="Output dimensions decision matrix: columns are the five quality dimensions for statistical outputs; relevance, accuracy and reliability, timeliness and punctuality, accessibility and clarity, coherence and comparability. Rows have the following names; user needs, resources available, potential risks, actions needed" width="850" />
 
 
@@ -61,7 +61,7 @@ We also advise that you consider this section of the framework in the context of
 
 Relevance refers to the degree to which statistical outputs meet user needs. It is covered in Principle V1 (Relevance to Users) of the UK Code of Practice.  
 
-_“Relevance is important because it places users and data at the centre of statistical production. Relevance is assessed by understanding user needs.”_  (Code of Practice for Statistics, UK Statistics Authority, 2018)
+“Relevance is important because it places users and data at the centre of statistical production. Relevance is assessed by understanding user needs.”  (Code of Practice for Statistics, UK Statistics Authority, 2018)
 
 ### Is this dimension important to me? 
 
@@ -85,7 +85,7 @@ In order to ensure you have a clear understanding of the needs of your user(s), 
 
 * What are the implications of this for the usage of the output? 
 
-The _crucial_ element to this process is not just understanding the relevance of your output, but communicating this understanding to your users. Without this, people using the output may not use it appropriately, as they may not realise it is telling them something different from what they expected. 
+The crucial element to this process is not just understanding the relevance of your output, but communicating this understanding to your users. Without this, people using the output may not use it appropriately, as they may not realise it is telling them something different from what they expected. 
 
 In essence, after processing and analysis, does what you have produced match what was needed – if not, how does it differ and what does this mean for the user? It is also important to note that user needs may change over time. Regular communication with your users is necessary to ensure you are still on track to produce something relevant to their needs. 
 
@@ -147,7 +147,7 @@ Although the theory for measuring error when using admin data is less establishe
 
 For a more detailed assessment of accuracy, ESSnet have developed a number of indicators that may help guide you through this thinking process in a structured way, which you can find in Appendix A of “[Final list of quality indicators and associated guidance](https://www.academia.edu/78989386/ESSNET_USE_OF_ADMINISTRATIVE_AND_ACCOUNTS_DATA_IN_BUSINESS_STATISTICS_WP6_Quality_Indicators_when_using_Administrative_Data_in_Statistical_Outputs_Final_list_of_quality_indicators_and_associated_guidance_Final_list_of_quality_indicators_and_associated_guidance)”. There is also ongoing work on various methods that can be used to quantify elements of accuracy, which you may decide you would like to look in to. 
 
-__There is ongoing work on the assessment of accuracy of administrative data. We will add links as they appear.__
+There is ongoing work on the assessment of accuracy of administrative data. We will add links as they appear.
 
 Finally, you should think about how to communicate any assessments of accuracy/measurement error and reliability. It is typically recommended to publish methods used for processing and analysis, and clear, transparent communication about these is particularly important for administrative data methods, which are often new or have been adapted from survey methods. 
  
@@ -202,7 +202,7 @@ Sometimes substantial time lags may be unavoidable. However, understanding the t
 
 ### Definition
 
-_“Statistics and data should be equally available to all, not given to some people before others. They should be published at a sufficient level of detail and remain publicly available.”_
+“Statistics and data should be equally available to all, not given to some people before others. They should be published at a sufficient level of detail and remain publicly available.”
 
 Code of Practice for Statistics, UK Statistics Authority, 2018 
 
@@ -256,7 +256,7 @@ It may be useful to workshop the above questions with the team involved in creat
 
 
 ### Definition
-_“Producers must demonstrate that they do not simply publish a set of numbers, but that they explain how they relate to other data on the topic, and how they combine with other statistics to better explain the part of the world they describe.”_ 
+“Producers must demonstrate that they do not simply publish a set of numbers, but that they explain how they relate to other data on the topic, and how they combine with other statistics to better explain the part of the world they describe.”
 
 Code of Practice for Statistics, UK Statistics Authority, 2018 
 

@@ -8,7 +8,28 @@ This framework aims to help you assess the quality of administrative data for us
 
 Administrative data are data which have been collected during the operations of an organisation. Government produces a very large amount of administrative data, providing a valuable resource if it can be used correctly. There are legal gateways which can allow accredited and approved researchers to access administrative data for research and statistical purposes. There are certain criteria to meet to ensure this can happen, including the assurance that a person’s identity cannot be identified in the information disclosed for research and statistics. 
 
-Administrative data are generally not collected for the sole purpose of producing statistics. This can lead to challenges when using it for this reason, a summary of which can be found in David Hand’s paper, [“Statistical challenges of administrative and transaction data”.](https://rss.onlinelibrary.wiley.com/doi/10.1111/rssa.12315). 
+Administrative data are generally not collected for the sole purpose of producing statistics. This can lead to challenges when using it for this reason, a summary of which can be found in David Hand’s paper, [“Statistical challenges of administrative and transaction data”.](https://rss.onlinelibrary.wiley.com/doi/10.1111/rssa.12315) 
+
+## Accessibility
+We are currently conducting work to review and, where possible, improve the accessibility of this guidance.  
+
+As part of this, we welcome any feedback on accessibility. If you find any problems, please contact us by emailing methods.research@ons.gov.uk. Please also get in touch if you are unable to access any part of this guidance, or require the content in a different format. We will consider your request and aim to get back to you within five working days. 
+
+Current accessibility features include: 
+
+* Font is arial size 12 minimum. 
+
+* You can navigate the framework using a keyboard – up and down arrow keys to scroll up and down, tab to highlight the different sections at the top, and enter to select them. 
+
+* Text can be read aloud to you (in Microsoft Edge browser) by right clicking and selecting “read aloud”. 
+
+* You can change colours, contrast levels, and font: in Microsoft Edge with “Immersive Reader” feature (right click and select “Immersive Reader”), in Google Chrome with style sheet (right click and select “Inspect”). 
+
+* You can zoom in up to 300% without the text spilling off the screen in Microsoft Edge’s “Immersive Reader” (right click and select “Immersive Reader”). 
+
+* There is alt text for the images when hovered over with a cursor. 
+
+Please note these features do not necessarily apply to the documents linked in the framework. 
 
 ## What is quality?
 
@@ -61,8 +82,13 @@ This framework is one piece of the puzzle, but there are also other tools that c
 We plan to add to this framework over time with other useful resources, tools, and guidance that we find and develop, and to better integrate with the other existing tools. Current planned developments are outlined below: 
 
 * The addition of case studies to help outline how others have applied this framework and used it to quality assess data or outputs. 
+
 * More detailed guidance on quality indicators / metrics / methods for the different dimensions. 
+
 * A link to an Error Catalogue that has been developed, outlining the different errors that can occur when using administrative data for statistical purposes, alongside proposed methods for measuring / addressing them. 
+
 * A link to a Conversation Toolkit to assist with communications with suppliers and asking questions about the quality of administrative data sources. 
+
 * A section covering the methodology / processing phase of the administrative data journey. 
+
 * A process map outlining the different tools and guidance in the administrative data quality space, and at what stage you might want to use them. 

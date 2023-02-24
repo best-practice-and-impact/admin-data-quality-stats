@@ -18,8 +18,11 @@ Both phases use quality dimensions to help you prioritise and assess different a
 Each section contains: 
 
 * A description of the dimensions of quality. 
-* Challenges for each when using secure administrative data.  
+
+* Challenges for each when using secure administrative data. 
+
 * Questions to guide you through deciding how important each dimension of quality is for your purpose (these decisions should also involve discussions with your users and careful consideration of their needs).  
+
 * Some “First Steps” questions to introduce assessing each dimension of quality, with some links to more in-depth methods.  
 
 We plan to add more detailed guidance around quality indicators / methods in a future iteration. If you have thoughts or preferences on how we include these, please email methods.research@ons.gov.uk 
@@ -30,7 +33,9 @@ Administrative data must be accessed securely and via legal gateways. Their use 
 Existing quality guidance, such as the [Quality Assurance of Administrative Data (QAAD)](https://osr.statisticsauthority.gov.uk/publication/administrative-data-and-official-statistics/pages/1/) emphasises the idea of proportionality. This is something to bear in mind in any quality assessment, including the present framework. Your assessment of quality should be proportionate to the needs of your users and the resource you have available. This framework has been designed to be flexible, and your approach can be tailored in proportion to your needs. There are three main ways to do this: 
 
 * Which / how many quality dimensions you look at. 
+
 * How you assess the dimensions, i.e., how in-depth your assessments are in terms of the methods / metrics you use (or if you use metrics at all). 
+
 * How you report the information, e.g., whether you produce a short summary covering the most important quality concerns, or a thorough, in-depth report on your entire assessment. 
 
 Also bear in mind that, as society changes, the uses and profile of your statistics and the risks to quality may change, sometimes rapidly. So previous quality assessments should then be revisited in the light of the current situation. 
@@ -40,8 +45,10 @@ Throughout this framework we suggest questions you may want to think about when 
 
 To guide you through this thought process, we set out a number of core questions to ask about the data or output. These are not exhaustive, but should provide a good starting point. There are often multiple approaches to answering or addressing these questions, and it may involve liaising with others within or outside your organisation (e.g. data owners, data suppliers, data acquisition teams, quality teams etc.). Again, this will partly depend on how much time and resource you have available, but some options are listed below to give you an idea: 
 
-* Accessing and exploring any metadata, collating existing documentation and knowledge about datasets, and pulling out the core aspects for your purposes. 
+* Accessing and exploring any metadata, collating existing documentation and knowledge about datasets, and pulling out the core aspects for your purposes.
+
 * Quantitative exploration of the data / output yourself (e.g. calculating metrics such as the percentage of missing values in a variable, looking at distributions, etc.). 
+
 * Qualitative exploration of the data / output yourself; this can involve conducting your own qualitative research with staff, or even members of the public, depending on how much time and resource you have. Understanding the context and motivations of those involved in inputting the data will enhance your understanding of its likely quality.  
 
 ## What do I do with the answers?
@@ -50,13 +57,17 @@ The Code of Practice for Statistics not only requires us to consider the strengt
 How you record and communicate the outcomes of applying this framework is largely up to you, and, you guessed it, should be based on your different users’ needs! One common approach is to layer the information in increasing levels of detail: 
 
 * The high-level headlines in the statistical bulletin should be accompanied up front with any information on uncertainty that is crucial to their understanding.  
+
 * Supporting information about sources and methods that is not likely to be required by the non-technical reader can be put in appendices or linked quality reports.  
+
 * Very detailed information on processes, code, and metadata can be made available through links in the quality reports. 
 
 We plan to add some case study examples to this framework in the future, but in the meantime, some ideas of how to record the outcomes of applying this framework are presented below: 
 
 * A strengths and weaknesses report outlining the core aspects of quality for your purposes, and how the data / output measures up to them. 
+
 * A detailed report outlining each dimension, how you assessed it, and what the outcome was. 
+
 * You could fill in the grids provided within our Input and Output sections, or create your own! Depending on your needs you could include actions needed, decisions taken, or just answers to questions / metrics. 
 
 It is important to have open discussions with your users throughout the quality assessment process about their needs. No dataset or output is perfect, but the most crucial element is transparent and clear communication with your users about the data you had, what you did with it, and what that means in terms of quality. This allows the person who is using that statistic to use it in a way which is informed, and any decisions they make with it to include important context. 
