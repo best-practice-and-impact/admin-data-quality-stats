@@ -13,7 +13,7 @@ The input quality assesses the data you have coming in the door; how suitable is
 
 The output quality assesses the quality of the statistics or analysis you have produced; how well does it meet you and your users’ needs? 
 
-Both phases use quality dimensions to help you prioritise and assess different aspects of fitness for use. Quality dimensions are characteristics of the data and output which may be important to you and your users. Very rarely will there be an output or dataset which is completely perfect. Identifying the dimensions which are important for you helps you to make decisions about how fit for purpose your data and output are. As the purpose of the data and output are different (one is to be processed, the other published and shared), the dimensions are slightly different across the phases.  
+Both phases use quality dimensions to help you prioritise and assess different aspects of fitness for use. Quality dimensions are characteristics of the data and output which may be important to you and your users. Very rarely will there be an output or data set which is completely perfect. Identifying the dimensions which are important for you helps you to make decisions about how fit for purpose your data and output are. As the purpose of the data and output are different (one is to be processed, the other published and shared), the dimensions are slightly different across the phases.  
 
 Each section contains: 
 
@@ -45,7 +45,7 @@ Throughout this framework we suggest questions you may want to think about when 
 
 To guide you through this thought process, we set out a number of core questions to ask about the data or output. These are not exhaustive, but should provide a good starting point. There are often multiple approaches to answering or addressing these questions, and it may involve liaising with others within or outside your organisation (e.g. data owners, data suppliers, data acquisition teams, quality teams etc.). Again, this will partly depend on how much time and resource you have available, but some options are listed below to give you an idea: 
 
-* Accessing and exploring any metadata, collating existing documentation and knowledge about datasets, and pulling out the core aspects for your purposes.
+* Accessing and exploring any metadata, collating existing documentation and knowledge about data sets, and pulling out the core aspects for your purposes.
 
 * Quantitative exploration of the data / output yourself (e.g. calculating metrics such as the percentage of missing values in a variable, looking at distributions, etc.). 
 
@@ -70,4 +70,4 @@ We plan to add some case study examples to this framework in the future, but in 
 
 * You could fill in the grids provided within our Input and Output sections, or create your own! Depending on your needs you could include actions needed, decisions taken, or just answers to questions / metrics. 
 
-It is important to have open discussions with your users throughout the quality assessment process about their needs. No dataset or output is perfect, but the most crucial element is transparent and clear communication with your users about the data you had, what you did with it, and what that means in terms of quality. This allows the person who is using that statistic to use it in a way which is informed, and any decisions they make with it to include important context. 
+It is important to have open discussions with your users throughout the quality assessment process about their needs. No data set or output is perfect, but the most crucial element is transparent and clear communication with your users about the data you had, what you did with it, and what that means in terms of quality. This allows the person who is using that statistic to use it in a way which is informed, and any decisions they make with it to include important context. 
